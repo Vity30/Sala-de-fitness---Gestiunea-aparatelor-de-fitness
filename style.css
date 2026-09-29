@@ -1,0 +1,184 @@
+/* 4.1. Variabilele de culoare si reset-ul de baza */
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #5b3fd9;
+  --border: #e5e7eb;
+  
+  /* Culori specifice pentru grupele musculare */
+  --badge-push: #ef4444; /* Roșu */
+  --badge-pull: #3b82f6; /* Albastru */
+  --badge-legs: #10b981; /* Verde */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* 4.2. Antetul */
+.app-header {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.app-header h1, .app-header p {
+  margin: 0;
+}
+.app-header .app-count {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* 4.3. Cele doua coloane (Grid) */
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* 4.4. Panourile */
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+/* 4.5. Formularul (Flexbox) */
+.item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.item-form input, .item-form select {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.item-form button {
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.item-form button:hover {
+  opacity: 0.9;
+}
+
+/* 4.6. Cardul (Flexbox) */
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.item-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+
+/* 4.7. Etichetele colorate */
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: white;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.badge-push { background-color: var(--badge-push); }
+.badge-pull { background-color: var(--badge-pull); }
+.badge-legs { background-color: var(--badge-legs); }
+
+/* 4.8. Elementul finalizat (Mentenanta) */
+.item-card.done h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.item-card.done .status {
+  color: var(--muted);
+}
+
+/* Subsol */
+.app-footer {
+  text-align: center;
+  padding: 32px;
+  color: var(--muted);
+}
+
+/* 5. Starile interactive (Focus si Hover) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.item-card:hover {
+  border-color: var(--accent);
+}
+
+/* 4.9. Ecranele inguste */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tema intunecata */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14121d;
+    --card: #1e1b2e;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #352f4d;
+    
+    --badge-push: #991b1b;
+    --badge-pull: #1e3a8a;
+    --badge-legs: #065f46;
+  }
+}

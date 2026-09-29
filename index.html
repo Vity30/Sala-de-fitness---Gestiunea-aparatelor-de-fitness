@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestiune Aparate Fitness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sala de fitness</h1>
+    <p>Gestiunea aparatelor pe grupe musculare și starea lor de funcționare.</p>
+    <p class="app-count">3 aparate, dintre care 2 funcționale</p>
+  </header>
+  
+  <main class="container">
+    <section class="panel">
+      <h2>Adaugă aparat</h2>
+      <form class="item-form">
+        <label>Nume aparat 
+          <input type="text" name="titlu" placeholder="Ex: Presă picioare" />
+        </label>
+        <label>Grupă musculară
+          <select name="eticheta">
+            <option value="push">Push</option>
+            <option value="pull">Pull</option>
+            <option value="legs">Legs</option>
+          </select>
+        </label>
+        <button type="submit">Adaugă</button>
+      </form>
+    </section>
+    
+    <section class="panel">
+      <h2>Aparatele din sală</h2>
+      <!-- Când lista e goală: <p class="empty">Nu există niciun aparat.</p> -->
+      <ul class="item-list">
+        <li class="item-card">
+          <div>
+            <h3>Presa pentru picioare</h3>
+            <span class="badge badge-legs">Legs</span>
+          </div>
+          <span class="status">Funcțional</span>
+        </li>
+        <li class="item-card done">
+          <div>
+            <h3>Aparat pentru fluturări la piept</h3>
+            <span class="badge badge-push">Push</span>
+          </div>
+          <span class="status">Mentenanță</span>
+        </li>
+        <li class="item-card">
+          <div>
+            <h3>Helcometru</h3>
+            <span class="badge badge-pull">Pull</span>
+          </div>
+          <span class="status">Funcțional</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>
