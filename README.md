@@ -1,18 +1,18 @@
 # Sala-de-fitness---Gestiunea-aparatelor-de-fitness
-Aplicatia gestioneaza inventarul aparatelor dintr-o sală de fitness. Permite urmarirea starii de mentenanta si organizarea echipamentelor pe grupe musculare.
+Aplicatia gestioneaza inventarul aparatelor dintr-o sala de fitness. Permite urmarirea starii de mentenanta si organizarea echipamentelor pe grupe musculare.
 
 ## Data model
 | Field | Type | Notes |
 | --- | --- | --- |
 | Nume aparat | text | required, max 100 chars |
 | Stare | boolean | toggled from the list, default false |
-| Grupă musculară | fixed values | Push, Pull, Legs |
-| Zona din sală | relation | Greutăți libere, Cabluri, Cardio |
+| Grupa musculara | fixed values | Push, Pull, Legs |
+| Zona din sala | relation | Greutati libere, Cabluri, Cardio |
 | Responsabil tehnic | relation | the owner of the item (from week 11) |
 
 Sample data used across all stages:
 1. Presa pentru picioare, activ, Legs
-2. Aparat pentru fluturari la piept, mentenanță, Push
+2. Aparat pentru fluturari lapiept, mentenanță, Push
 3. Helcometru, activ, Pull
 
 ## AI usage
