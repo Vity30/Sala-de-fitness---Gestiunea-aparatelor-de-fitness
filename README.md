@@ -55,10 +55,10 @@ Plain JavaScript, no DOM. `aparate.js` holds the array and the functions that re
 ## Checklist Etapa 2
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S2-R1 | JS file linked, logs on page load | [index.html](<LINK_CATRE_SCRIPT>) | open page, F12 |
-| S2-R2 | 3+ items with id, nume, functional, grupa | [aparate.js](<LINK_CATRE_ARRAY>) | read |
-| S2-R3 | list, count, search, add, toggle, delete | [aparate.js](<LINK_CATRE_FUNCTII>) | console output |
-| S2-R4 | add rejects empty name and invalid tag | [aparate.js](<LINK_CATRE_VALIDARE>) | last 2 console lines |
-| S2-R5 | original array unchanged after add | [aparate.js](<LINK_CATRE_TEST_ADD>) | console line |
+| S2-R1 | JS file linked, logs on page load | [index.html] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/index.html#L64) | open page, F12 |
+| S2-R2 | 3+ items with id, nume, functional, grupa | [aparate.js] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/aparate.js#L2-L6) | read |
+| S2-R3 | list, count, search, add, toggle, delete | [aparate.js] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/aparate.js#L10-L62) | console output |
+| S2-R4 | add rejects empty name and invalid tag | [aparate.js] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/aparate.js#L34-L42) | last 2 console lines |
+| S2-R5 | original array unchanged after add | [aparate.js] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/aparate.js#L72-L75) | console line |
 | S2-R6 | README Stage 2 section + AI log | README.md, ai-log/etapa-02.md | read |
-| S2-R7 | commit "Stage 2" pushed | [link commit](<LINK_CATRE_ULTIMUL_COMMIT>) | commit history |
+| S2-R7 | commit "Stage 2" pushed | [link commit] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/db5a20a3214dd60c379ae2c87b9a8d9de236a925) | commit history |
