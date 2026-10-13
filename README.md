@@ -28,7 +28,8 @@ Open `index.html` in a browser. No build step, no server.
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
-- [ ] Stage 3: Vite and React project
+- [x] Stage 3: Vite and React project
+- [ ] Stage 4:
 
 ---
 
@@ -62,3 +63,23 @@ Plain JavaScript, no DOM. `aparate.js` holds the array and the functions that re
 | S2-R5 | original array unchanged after add | [aparate.js] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/db5a20a3214dd60c379ae2c87b9a8d9de236a925/aparate.js#L72-L75) | console line |
 | S2-R6 | README Stage 2 section + AI log | README.md, ai-log/etapa-02.md | read |
 | S2-R7 | commit "Stage 2" pushed | [link commit] (https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/db5a20a3214dd60c379ae2c87b9a8d9de236a925) | commit history |
+
+## Stage 3: Vite and React project
+The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## How to run
+cd frontend
+npm install
+npm run dev
+Then open the address printed in the terminal (http://localhost:5173).
+
+## Checklist Etapa 3
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S3-R1 | npm run dev starts without errors | frontend/package.json | npm install, npm run dev |
+| S3-R2 | app name and counter computed from data | [App.jsx](LINK_CATRE_LINIA_DIN_APP_JSX) | edit data, save |
+| S3-R3 | data from README, not from the example | [App.jsx](LINK_CATRE_LINIA_DIN_APP_JSX) | compare with README |
+| S3-R4 | stage 1 styles reused | frontend/src/App.css | look at the page |
+| S3-R5 | node_modules ignored, build passes | frontend/.gitignore | npm run build |
+| S3-R6 | README Stage 3 section + AI log | README.md, ai-log/etapa-03.md | read |
+| S3-R7 | commit "Stage 3" pushed | [link commit](LINK_CATRE_ULTIMUL_COMMIT) | commit history |
