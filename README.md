@@ -106,3 +106,15 @@ The gym equipment list is rendered dynamically from the `aparate` array in `App.
 - `AparatList` uses `map()` and `key={aparat.id}` to render the cards.
 - An explicit message is displayed when the equipment list is empty.
 - The card status and appearance depend on the `functional` property of each item.
+
+## Stage 4 checklist
+
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S4-R1 | At least two components in `src/components/` | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/tree/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components | Open folder |
+| S4-R2 | Card receives data through props | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatCard.jsx#L1-L8 | Read component |
+| S4-R3 | `map()` + `key={aparat.id}`, no console warnings | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatList.jsx#L10-L12 | Open browser Console |
+| S4-R4 | Message for an empty list | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatList.jsx#L3-L6 | Temporarily set array to `[]` |
+| S4-R5 | Changing `functional` changes the card appearance | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatCard.jsx#L4-L6 · https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatCard.jsx#L27-L29 | Toggle `functional` |
+| S4-R6 | README Stage 4 section and AI log | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/README.md · https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/ai-log/etapa-04.md | Read files |
+| S4-R7 | Stage 4 implementation commit published | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/57dd7a33c9d6660d146f08fb741ffa2e64300e4c | Open commit |
