@@ -96,7 +96,13 @@ After `npm run dev`, open http://localhost:5173/ in your browser (Vite prints th
 
 ---
 
+
 ## Stage 4: components
-The list is rendered from the data, through two components:
-- `AparatList` receives the whole array and renders one card per item
-- `AparatCard` receives a single item through props and displays it
+
+The gym equipment list is rendered dynamically from the `aparate` array in `App.jsx`, using two React components:
+
+- `AparatList` receives the complete array through props and renders one card for each item.
+- `AparatCard` receives a single `aparat` object through props and displays its image, name, system ID, and functional status.
+- `AparatList` uses `map()` and `key={aparat.id}` to render the cards.
+- An explicit message is displayed when the equipment list is empty.
+- The card status and appearance depend on the `functional` property of each item.

@@ -1,31 +1,32 @@
-// Un singur element din lista, primit prin props.
-const ETICHETE_GRUPA = {
-  Legs: "Picioare 🦵",
-  Push: "Piept 🏋️",
-  Pull: "Spate 🦍",
-  Arms: "Brate 🦾",
-  Cardio: "Cardio 🏃",
-  Core: "Abdomen 🤸"
-};
-
 export default function AparatCard({ aparat }) {
-  const cardClass = aparat.functional ? "task-card" : "task-card done";
-  const iconitaStatus = aparat.functional ? "✅" : "🛠️";
+  const esteFunctional = aparat.functional;
+
+  const statusClass = esteFunctional
+    ? "status status-functional"
+    : "status status-defect";
+
+  const codAparat = `#SYS-${String(aparat.id).padStart(3, "0")}`;
 
   return (
-    <li className={cardClass}>
-      <img src={aparat.imagine} alt={aparat.nume} className="card-img" />
-      
+    <li className="task-card">
+      <img
+        src={aparat.img}
+        alt={aparat.nume}
+        className="card-img"
+        loading="lazy"
+      />
+
       <div className="card-content">
         <h3>{aparat.nume}</h3>
-        <span className={`badge badge-${aparat.grupa.toLowerCase()}`}>
-          Grupa: {ETICHETE_GRUPA[aparat.grupa] || aparat.grupa}
+      </div>
+
+      <div className="card-footer">
+        <span className="system-id">{codAparat}</span>
+
+        <span className={statusClass}>
+          {esteFunctional ? "✓ FUNCȚIONAL" : "✕ DEFECT"}
         </span>
       </div>
-      
-      <span className="status">
-        {iconitaStatus} {aparat.functional ? "Functional" : "Defect"}
-      </span>
     </li>
   );
 }

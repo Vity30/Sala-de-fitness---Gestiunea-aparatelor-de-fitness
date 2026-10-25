@@ -1,119 +1,553 @@
-/* --- TEMA BLACK & YELLOW --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #08080a;
+  --panel: #111114;
+  --card: #141417;
+  --yellow: #ffd21a;
+  --yellow-soft: #ffe46a;
+  --line: rgba(255, 210, 26, 0.20);
+  --text: #f4f4f5;
+  --muted: #96969f;
+  --ok: #4ade80;
+  --bad: #ff7078;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #111111;
-  color: #ffffff;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(
+      ellipse 70% 38% at 50% -8%,
+      rgba(255, 210, 26, 0.16),
+      transparent 72%
+    ),
+    linear-gradient(rgba(255, 210, 26, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 210, 26, 0.035) 1px, transparent 1px);
+  background-size: auto, 44px 44px, 44px 44px;
+  background-attachment: fixed;
 }
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--yellow);
+  color: #000;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 .app-header {
-  background-color: #facc15;
-  color: #111111;
-  padding: 20px;
+  position: relative;
+  padding: 40px 20px 28px;
   text-align: center;
+  background: transparent;
 }
 
-.app-count {
-  font-weight: bold;
-  font-size: 1.1rem;
+.app-header h1 {
+  margin: 0 0 10px;
+  color: var(--yellow);
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 5.4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(255, 210, 26, 0.45),
+    0 0 32px rgba(255, 210, 26, 0.20);
 }
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-.panel {
-  background-color: #1a1a1a;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
-}
-
-/* --- CARDURI CU POZE --- */
-.task-card {
-  background-color: #242424;
-  border-left: 5px solid #facc15;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.task-card.done {
-  border-left-color: #555555;
-  opacity: 0.6;
-}
-
-.card-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-  border: 2px solid #333;
-}
-
-.card-content {
-  flex-grow: 1;
-}
-
-.task-card h3 {
-  margin: 0 0 10px 0;
-  color: #facc15;
-}
-
-.status {
-  font-weight: bold;
-  background: #111;
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #333;
-}
-
-/* --- CULORI BADGES --- */
-.badge {
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.badge-legs { background-color: #16a34a; }
-.badge-push { background-color: #dc2626; }
-.badge-pull { background-color: #2563eb; }
-.badge-arms { background-color: #9333ea; }
-.badge-cardio { background-color: #0891b2; }
-.badge-core { background-color: #ea580c; }
-
-/* --- STILIZARE LEGENDA --- */
-.legend {
-  margin-top: 15px;
-  display: inline-flex;
-  justify-content: center;
-  gap: 15px;
-  align-items: center;
+.app-header > p:not(.app-count) {
+  margin: 0 auto;
+  color: var(--muted);
   font-size: 0.9rem;
-  background-color: rgba(0, 0, 0, 0.15);
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.055em;
+}
+
+/* Statistica si legenda pe acelasi rand */
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 15px;
+  margin-top: 12px;
+}
+
+.app-header .app-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 210, 26, 0.075);
+  color: var(--yellow-soft);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+.app-count::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.65);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+}
+
+/* =========================
+   LEGENDA STATUSURILOR
+========================= */
+
+.legend {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 13px;
+  background: rgba(20, 20, 23, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.legend strong {
+  color: var(--text);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
 }
 
 .status-badge {
-  background: #111;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   padding: 4px 10px;
-  border-radius: 4px;
-  border: 1px solid #333;
-  color: white;
-  font-weight: normal;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-badge.ok {
+  color: var(--ok);
+  border-color: rgba(74, 222, 128, 0.18);
+  box-shadow: 0 0 9px rgba(74, 222, 128, 0.045);
+}
+
+.status-badge.bad {
+  color: var(--bad);
+  border-color: rgba(255, 112, 120, 0.18);
+}
+
+/* Linia galbena decorativa */
+
+.app-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: min(510px, 75%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 210, 26, 0.75),
+    transparent
+  );
+  box-shadow: 0 0 15px 2px rgba(255, 210, 26, 0.25);
+}
+
+/* =========================
+   CONTINUT SI PANOU
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 30px auto 60px;
+  padding: 0 18px;
+}
+
+.panel {
+  position: relative;
+  padding: 24px 25px 28px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 24, 0.97),
+    rgba(14, 14, 17, 0.98)
+  );
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Colturi luminoase */
+
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--yellow);
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(255, 210, 26, 0.45));
+}
+
+.panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 14px 0 0 0;
+}
+
+.panel::after {
+  right: -1px;
+  bottom: -1px;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 14px 0;
+}
+
+.panel h2 {
+  margin: 0 0 18px;
+  padding-bottom: 13px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.065);
+  color: var(--text);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   GRILA DE APARATE
+========================= */
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 210, 26, 0.10);
+  border-radius: 14px;
+  background: var(--card);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 210, 26, 0.38);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* Fotografia aparatului */
+
+.card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #202024;
+  filter: saturate(0.86) brightness(0.92);
+  transition: filter 0.25s ease;
+}
+
+.task-card:hover .card-img {
+  filter: saturate(1) brightness(1);
+}
+
+/* Denumirea aparatului */
+
+.card-content {
+  min-width: 0;
+  padding-top: 10px;
+}
+
+.card-content h3 {
+  margin: 0;
+  color: #f0f0f2;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(0.69rem, 1.15vw, 0.86rem);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+/* Cod si status */
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.system-id {
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #85858d;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.status-functional {
+  color: var(--ok);
+  border-color: rgba(74, 222, 128, 0.20);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.04);
+}
+
+.status-defect {
+  color: var(--bad);
+  border-color: rgba(255, 112, 120, 0.19);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 112, 120, 0.035);
+}
+
+.empty {
+  padding: 25px 10px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px;
+  }
+
+  .task-list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .task-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .container {
+    max-width: 760px;
+  }
+
+  .panel {
+    padding: 22px 18px 24px;
+  }
+
+  .card-content h3 {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-header {
+    padding: 32px 14px 24px;
+  }
+
+  .app-header h1 {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    letter-spacing: 0.055em;
+  }
+
+  .header-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .app-header .app-count {
+    max-width: 100%;
+    font-size: 0.82rem;
+  }
+
+  .legend {
+    max-width: 100%;
+    gap: 7px;
+    padding: 9px;
+  }
+
+  .legend strong {
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 22px;
+    padding: 0 12px;
+  }
+
+  .panel {
+    padding: 19px 12px 20px;
+    border-radius: 12px;
+  }
+
+  .panel h2 {
+    font-size: 0.95rem;
+  }
+
+  .task-list {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .task-card {
+    padding: 9px;
+  }
+
+  .card-content h3 {
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fonturi noi */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Titlul principal rămâne futurist */
+
+.app-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* Titlul panoului: elegant, dar numai cu majuscule */
+
+.panel h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+/* Denumirile aparatelor: font modern, natural */
+
+.card-content h3 {
+  font-family: "Sora", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+/* Eticheta STATUS */
+
+.legend strong {
+  font-family: "Sora", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* Statusurile verde și roșu */
+
+.status,
+.status-badge {
+  font-family: "Sora", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
 }

@@ -13,6 +13,6 @@
 - Changed or rejected: Am pastrat denumirile specifice temei (sala de fitness) si am evitat folosirea diacriticelor in cod.
 
 ### 2. Personalizare pentru puncte bonus
-- Asked: O idee de personalizare a etapei pentru a obtine puncte in plus de la profesor, bazata pe cerintele etapei 4.
-- Got: Am implementat randare conditionata suplimentara in AparatCard pentru a afisa emoji-uri specifice in functie de grupa musculara (Picioare 🦵, Impingere 🏋️, Tractiune 💪) si un icon de status (✅ pentru functional, 🛠️ pentru defect). 
-- Changed or rejected: Am integrat direct solutia deoarece demonstreaza stapanirea conceptului de "componente construite din date" si imbunatateste vizual aplicatia.
+- Asked: Idei de personalizare a interfetei pentru tema proprie, astfel incat proiectul sa fie mai atractiv si sa respecte cerintele etapei 4.
+- Got: Sugestii pentru imbunatatirea designului cardurilor, folosirea unor fonturi moderne si afisarea mai clara a denumirii, codului si a statusului fiecarui aparat.
+- Changed or rejected: Am personalizat interfata folosind tema negru-galben, efecte vizuale si fonturi mai elegante. De asemenea, am pastrat afisarea dinamica a statusului fiecarui aparat, in functie de functionalitate.
