@@ -31,7 +31,8 @@ Open `index.html` in a browser. No build step, no server.
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
-- [ ] Stage 5: local state and events
+- [x] Stage 5: local state and events
+-
 
 ---
 
@@ -118,3 +119,20 @@ The gym equipment list is rendered dynamically from the `aparate` array in `App.
 | S4-R5 | Changing `functional` changes the card appearance | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatCard.jsx#L4-L6 · https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/frontend/src/components/AparatCard.jsx#L27-L29 | Toggle `functional` |
 | S4-R6 | README Stage 4 section and AI log | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/README.md · https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/ai-log/etapa-04.md | Read files |
 | S4-R7 | Stage 4 implementation commit published | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/57dd7a33c9d6660d146f08fb741ffa2e64300e4c | Open commit |
+
+## Stage 5: local state and events
+
+The fitness equipment list is now stored in React state using `useState`. Toggling a machine's functional status and deleting an item work interactively from the page, and the header counters update automatically as derived values. A theme toggle button in the header allows switching between light and dark modes dynamically using `data-theme` on the `<html>` element.
+
+## Stage 5 checklist
+
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S5-R1 | list kept in useState, in App | frontend/src/App.jsx | read |
+| S5-R2 | toggling changes state and card look | frontend/src/App.jsx, frontend/src/components/AparatCard.jsx | click a checkbox |
+| S5-R3 | delete removes the item | frontend/src/App.jsx, frontend/src/components/AparatCard.jsx | click Delete |
+| S5-R4 | header counter derived, not in state | frontend/src/App.jsx | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice, assignment) | frontend/src/App.jsx | read |
+| S5-R6 | light/dark toggle: state + data-theme on html | frontend/src/App.jsx, frontend/src/App.css | click the button |
+| S5-R7 | no console warnings; README + AI log | README.md, ai-log/etapa-05.md | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | link to the commit | commit history |

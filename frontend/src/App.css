@@ -551,3 +551,169 @@ body {
   font-weight: 600;
   letter-spacing: 0.015em;
 }
+
+/* Etapa 5: butonul de comutare a temei, in coltul antetului */
+.app-header { 
+  position: relative; 
+}
+.theme-toggle {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  background: #facc15 !important;
+  color: #101211 !important;
+  border-color: #facc15 !important;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.4) !important;
+}
+
+/* Etapa 5: checkbox si buton de stergere in card */
+.task-main { 
+  display: flex; 
+  align-items: center; /* Modificat din flex-start în center */
+  gap: 12px; 
+  cursor: pointer; 
+  padding: 10px 15px; /* Adaugă puțin spațiu sub poză dacă e nevoie */
+}
+.task-main input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #facc15; /* Galben asortat cu titlul tau */
+  cursor: pointer;
+  margin-top: 5px;
+}
+.btn-danger {
+  border: 1px solid #ef4444; /* Rosu pentru stergere */
+  background: transparent;
+  color: #ef4444;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+.btn-danger:hover { 
+  background: #ef4444; 
+  color: #fff; 
+}
+
+/* Selectia de text (highlight cu cursorul) setata pe verde neon */
+html[data-theme="light"] ::selection {
+  background-color: #C6FF3D !important;
+  color: #101211 !important;
+}
+
+/* Fundalul paginii alb curat */
+html[data-theme="light"] body {
+  background-color: #f8f9fa !important;
+  color: #101211 !important;
+  background-image: none !important;
+}
+
+/* Titluri si texte din antet pe verde neon, cu umbra pentru contrast pe alb */
+html[data-theme="light"] .app-header h1,
+html[data-theme="light"] .app-header p,
+html[data-theme="light"] .app-header .app-count,
+html[data-theme="light"] h2 {
+  color: #C6FF3D !important;
+  text-shadow: 1px 1px 3px #000, 0 0 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Liniile si umbrele de sub antet schimbate in verde neon */
+html[data-theme="light"] .app-header {
+  border-bottom: 2px solid #C6FF3D !important;
+  box-shadow: 0 10px 20px -10px rgba(198, 255, 61, 0.5) !important;
+}
+
+/* Panoul principal devine alb */
+html[data-theme="light"] .container,
+html[data-theme="light"] .panel {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Coltul panoului reparat si setat pe verde neon */
+html[data-theme="light"] .panel {
+  border-top-color: #C6FF3D !important;
+  border-left-color: #C6FF3D !important;
+}
+html[data-theme="light"] .panel::before,
+html[data-theme="light"] .panel::after {
+  background-color: #C6FF3D !important;
+  border-color: #C6FF3D !important;
+}
+
+/* Cardurile aparatelor albe cu contur neon */
+html[data-theme="light"] .task-card {
+  background-color: #ffffff !important;
+  border: 2px solid #C6FF3D !important; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+html[data-theme="light"] .task-card:hover {
+  box-shadow: 0 8px 25px rgba(198, 255, 61, 0.3) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Textul aparatelor negru pentru lizibilitate pe cardul alb */
+html[data-theme="light"] .task-main h3,
+html[data-theme="light"] .card-content h3 {
+  color: #101211 !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="light"] .system-id {
+  color: #475569 !important;
+  text-shadow: none !important;
+}
+
+/* Textul "STATUS:" din legenda facut alb */
+html[data-theme="light"] .legend strong {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Bifele si casutele pe verde neon */
+html[data-theme="light"] .task-main input[type="checkbox"] {
+  accent-color: #C6FF3D !important;
+  outline: 1px solid #101211 !important; 
+}
+
+/* Status functional si defect - fundal negru pentru a scoate in evidenta textul neon */
+html[data-theme="light"] .status-badge.ok,
+html[data-theme="light"] .status-functional {
+  background-color: #1a1e1b !important;
+  color: #C6FF3D !important;
+  border: 1px solid #C6FF3D !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="light"] .status-badge.bad,
+html[data-theme="light"] .status-defect {
+  background-color: #1a1e1b !important;
+  color: #ef4444 !important;
+  border: 1px solid #ef4444 !important;
+  text-shadow: none !important;
+}
+
+/* Butonul din antet */
+html[data-theme="light"] .theme-toggle {
+  border: 1px solid #C6FF3D !important;
+  color: #C6FF3D !important;
+  background: #101211 !important;
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background: #C6FF3D !important;
+  color: #101211 !important;
+}
