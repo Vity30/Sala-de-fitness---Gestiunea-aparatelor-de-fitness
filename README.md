@@ -147,7 +147,7 @@ The fitness equipment list is now stored in React state using `useState`. Toggli
 | S5-R5 | immutable updates (no push, splice, assignment) | frontend/src/App.jsx | read |
 | S5-R6 | light/dark toggle: state + data-theme on html | frontend/src/App.jsx, frontend/src/App.css | click the button |
 | S5-R7 | no console warnings; README + AI log | README.md, ai-log/etapa-05.md | F12, Console |
-| S5-R8 | commit "Stage 5" pushed | link to the commit | commit history |
+| S5-R8 | commit "Stage 5" pushed | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/901286a774ddcce53396c5c3a96cd884e0e36db4 | commit history |
 
 ---
 
@@ -172,4 +172,4 @@ npm run dev     # terminal 2, http://localhost:5173
 | S6-R4 | error message when API is down | frontend/src/App.jsx | stop `npm run api`, refresh page |
 | S6-R5 | fetch only in api.js, URL from env | frontend/src/api.js, frontend/.env.example | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | README.md, ai-log/etapa-06.md | read |
-| S6-R7 | commit "Stage 6" pushed | link to the commit | check commit history |
+| S6-R7 | commit "Stage 6" pushed | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/51efb5d14c145e99835c566ef78fb1a97b0981e2 | check commit history |
