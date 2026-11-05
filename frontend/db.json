@@ -1,0 +1,64 @@
+{
+  "aparate": [
+    {
+      "id": 1,
+      "nume": "Presa pentru picioare",
+      "grupa": "Legs",
+      "functional": true,
+      "img": "/img/PresaPicioare.jpg",
+      "descriere": "Un exercitiu compus esential pentru dezvoltarea fortei...",
+      "executie": "Aseaza-te pe aparat cu spatele lipit bine de suport...",
+      "muschi": "Cvadriceps, Fesieri, Ischiogambieni, Gambe"
+    },
+    {
+      "id": 2,
+      "nume": "Aparat pentru fluturari la piept",
+      "grupa": "Push",
+      "functional": false,
+      "img": "/img/FluturariPiept.jpg",
+      "descriere": "Cunoscut si sub numele de Pec Deck, acest exercitiu izoleaza...",
+      "executie": "Regleaza scaunul astfel incat manerele sa fie la nivelul pieptului...",
+      "muschi": "Pectorali majori, Fasciculul anterior al deltoidului"
+    },
+    {
+      "id": 3,
+      "nume": "Helcometru",
+      "grupa": "Pull",
+      "functional": true,
+      "img": "/img/Helcometru.jpg",
+      "descriere": "Un exercitiu fundamental pentru dezvoltarea latimii spatelui...",
+      "executie": "Prinde bara cu o priza mai lata decat umerii...",
+      "muschi": "Marele dorsal, Rotundul mare, Biceps, Romboizi"
+    },
+    {
+      "id": 4,
+      "nume": "Banca Scott",
+      "grupa": "Arms",
+      "functional": true,
+      "img": "/img/BancaScott.jpg",
+      "descriere": "Izoleaza complet bicepsul brahial, impiedicand balansul corpului...",
+      "executie": "Stai cu bratele sprijinite pe planul inclinat al bancii...",
+      "muschi": "Biceps brahial, Brahial anterior"
+    },
+    {
+      "id": 5,
+      "nume": "Banda de alergare",
+      "grupa": "Cardio",
+      "functional": false,
+      "img": "/img/BandaAlergare.jpg",
+      "descriere": "Echipament cardio de baza pentru imbunatatirea rezistentei...",
+      "executie": "Porneste banda la o viteza mica de incalzire...",
+      "muschi": "Sistem cardiovascular, Cvadriceps, Ischiogambieni, Gambe, Core"
+    },
+    {
+      "id": 6,
+      "nume": "Aparat Crunch",
+      "grupa": "Core",
+      "functional": true,
+      "img": "/img/AparatCrunch.jpg",
+      "descriere": "Permite adaugarea de greutate progresiva pentru antrenamentul...",
+      "executie": "Aseaza-te pe scaun si fixeaza picioarele sub suporturi...",
+      "muschi": "Dreptul abdominal, Oblici"
+    }
+  ]
+}

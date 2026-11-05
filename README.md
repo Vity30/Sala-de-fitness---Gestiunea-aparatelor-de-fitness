@@ -1,19 +1,25 @@
 # Sala-de-fitness---Gestiunea-aparatelor-de-fitness
+
 Aplicatia gestioneaza inventarul aparatelor dintr-o sala de fitness. Permite urmarirea starii de mentenanta si organizarea echipamentelor pe grupe musculare.
 
 ## Data model
+
 | Field | Type | Notes |
 | --- | --- | --- |
 | Nume aparat | text | required, max 100 chars |
 | Stare | boolean | toggled from the list, default false |
-| Grupa musculara | fixed values | Push, Pull, Legs |
+| Grupa musculara | fixed values | Push, Pull, Legs, Arms, Cardio, Core |
 | Zona din sala | relation | Greutati libere, Cabluri, Cardio |
 | Responsabil tehnic | relation | the owner of the item (from week 11) |
 
 Sample data used across all stages:
+
 1. Presa pentru picioare, activ, Legs
-2. Aparat pentru fluturari la piept, mentenanță, Push
+2. Aparat pentru fluturari la piept, mentenanta, Push
 3. Helcometru, activ, Pull
+4. Banca Scott, activ, Arms
+5. Banda de alergare, mentenanta, Cardio
+6. Aparat Crunch, activ, Core
 
 ## AI usage
 | Tool | Used for |
@@ -23,6 +29,7 @@ Sample data used across all stages:
 Details per stage: see the `ai-log/` folder.
 
 ## How to run
+
 Open `index.html` in a browser. No build step, no server.
 (From Stage 3 on, the app lives in `frontend/`; see "How to run" in the Stage 3 section.)
 
@@ -32,14 +39,17 @@ Open `index.html` in a browser. No build step, no server.
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
--
+- [x] Stage 6: data from a mock API
+- [ ] Stage 7: form and validation
 
 ---
 
 ## Stage 1: Static mockup
+
 HTML layout using Flexbox and CSS dark mode styling. Static interface representing the fitness equipment dashboard.
 
 ## Checklist Etapa 1
+
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
 | S1-R1 | README: description, fields, sample data, how to run | README.md | read |
@@ -54,6 +64,7 @@ HTML layout using Flexbox and CSS dark mode styling. Static interface representi
 ---
 
 ## Stage 2: Data logic
+
 Plain JavaScript, no DOM. `aparate.js` holds the array and the functions that read and change it. Results are printed in the browser console (F12).
 
 ## Checklist Etapa 2
@@ -97,7 +108,6 @@ After `npm run dev`, open http://localhost:5173/ in your browser (Vite prints th
 
 ---
 
-
 ## Stage 4: components
 
 The gym equipment list is rendered dynamically from the `aparate` array in `App.jsx`, using two React components:
@@ -120,6 +130,8 @@ The gym equipment list is rendered dynamically from the `aparate` array in `App.
 | S4-R6 | README Stage 4 section and AI log | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/README.md · https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/57dd7a33c9d6660d146f08fb741ffa2e64300e4c/ai-log/etapa-04.md | Read files |
 | S4-R7 | Stage 4 implementation commit published | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/57dd7a33c9d6660d146f08fb741ffa2e64300e4c | Open commit |
 
+---
+
 ## Stage 5: local state and events
 
 The fitness equipment list is now stored in React state using `useState`. Toggling a machine's functional status and deleting an item work interactively from the page, and the header counters update automatically as derived values. A theme toggle button in the header allows switching between light and dark modes dynamically using `data-theme` on the `<html>` element.
@@ -136,3 +148,28 @@ The fitness equipment list is now stored in React state using `useState`. Toggli
 | S5-R6 | light/dark toggle: state + data-theme on html | frontend/src/App.jsx, frontend/src/App.css | click the button |
 | S5-R7 | no console warnings; README + AI log | README.md, ai-log/etapa-05.md | F12, Console |
 | S5-R8 | commit "Stage 5" pushed | link to the commit | commit history |
+
+---
+
+## Stage 6: data from a mock API
+
+The list of fitness equipment is served by json-server from `db.json`. The app fetches it on load and handles the loading state and error state. Data is no longer hardcoded in the React components.
+
+To run the application, open two terminals:
+
+```bash
+npm run api     # terminal 1, http://localhost:3001
+npm run dev     # terminal 2, http://localhost:5173
+```
+
+## Stage 6 checklist
+
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S6-R1 | npm run api starts, route shows JSON | frontend/package.json, frontend/db.json | open `localhost:3001/aparate` |
+| S6-R2 | data no longer in React code | frontend/src/App.jsx | read code |
+| S6-R3 | loading message while waiting | frontend/src/App.jsx | run `npx json-server --watch db.json --port 3001 --delay 4000` |
+| S6-R4 | error message when API is down | frontend/src/App.jsx | stop `npm run api`, refresh page |
+| S6-R5 | fetch only in api.js, URL from env | frontend/src/api.js, frontend/.env.example | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | README.md, ai-log/etapa-06.md | read |
+| S6-R7 | commit "Stage 6" pushed | link to the commit | check commit history |

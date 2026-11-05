@@ -1,18 +1,18 @@
 # Stage 5: AI log
 
 ## Tools
--Gemini
+- Gemini
 
 ## Conversations
-Chat Session (Implementare state local cu useState, funcții imutabile, transmitere props, comutare temă light/dark și stilizare personalizată Black + Neon Lime)
+Chat Session (Implementare state local cu useState, functii imutabile, transmitere props, comutare tema light/dark si stilizare personalizata Industrial Steel)
 
 ## Key requests
-### 1. Migrarea listei în state și funcții de modificare
--Asked: Mutarea array-ului de aparate în useState în App.jsx, implementarea funcțiilor imutabile de comutare (handleToggle) și ștergere (handleDelete), și transmiterea lor prin props.
--Got: Codul complet adaptat pentru App.jsx, AparatList.jsx și AparatCard.jsx respectând formele imutabile cu funcție (prev) => ....
--Changed or rejected: Am scos imaginea din interiorul label-ului în AparatCard.jsx pentru a repara layout-ul flexbox și a elimina spațiile goale excesive de pe carduri.
+### 1. Migrarea listei in state si functii de modificare
+- Asked: Mutarea array-ului de aparate in `useState` in `App.jsx`, implementarea functiilor imutabile de comutare (`handleToggle`) si stergere (`handleDelete`), si transmiterea lor prin props.
+- Got: Codul complet adaptat pentru `App.jsx`, `AparatList.jsx` si `AparatCard.jsx` respectand formele imutabile cu functie `(prev) => ...`.
+- Changed or rejected: Am scos imaginea din interiorul label-ului in `AparatCard.jsx` pentru a repara layout-ul flexbox si a elimina spatiile goale excesive de pe carduri.
 
-### 2. Comutarea temei (Light / Dark) și personalizarea vizuală
--Asked: Configurarea butonului de schimbare a temei cu atributul data-theme pe elementul <html> și crearea unei teme luminoase pe stilul "Black + Neon Lime" cu elemente neon și text lizibil.
--Got: Soluția CSS cu variabile și reguli bazate pe html[data-theme="light"], incluzând efecte de hover, culori pentru bife, stări de funcțional/defect și hover-ul personalizat pentru buton.
--Changed or rejected: Am ajustat repetat fundalul și contrastul textelor pentru a asigura vizibilitatea maximă a literelor și a colțurilor panoului, înlocuind nuanțele deschise cu o temă luminoasă bine definită pe fond alb curat cu accente verde neon.
+### 2. Comutarea temei (Light / Dark) si personalizarea vizuala
+- Asked: Configurarea butonului de schimbare a temei cu atributul `data-theme` pe elementul `<html>` si crearea unei teme luminoase cu elemente distinctive si text lizibil.
+- Got: Solutia CSS cu variabile si reguli bazate pe `html[data-theme="light"]`, incluzand efecte de hover, culori pentru bife, stari de functional/defect si hover-ul personalizat pentru buton.
+- Changed or rejected: Am respins tema initiala "Black + Neon Lime" si am inlocuit-o complet cu o tema "Industrial Steel" (Otel + Portocaliu aprins). Am ajustat fundalul gri-albastrui (`#64748b`) cu pattern de grid, accente portocalii vibrante (`#ea580c`), contururi groase (`#0f172a`), umbre solide (hard shadows) si efecte de buton industrial decupat la colturi pentru a oferi un aspect mecanic, utilitar, potrivit pentru o sala de fitness.
