@@ -1,0 +1,130 @@
+/* =========================================================
+   FORMULARUL DE ADAUGARE
+========================================================= */
+
+/* Campurile unul sub altul */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Eticheta de deasupra fiecarui camp (NUME APARAT, GRUPA MUSCULARA) */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* Campul text si lista derulanta */
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: var(--placeholder);
+}
+
+.field select option {
+  background: var(--option-bg);
+  color: var(--text);
+}
+
+/* Campul activ: bordura in culoarea accentului si inel moale */
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent);
+  box-shadow: var(--focus-ring);
+}
+
+/* Campul gresit este marcat cu rosu (aria-invalid) */
+.field input[aria-invalid="true"] {
+  border-color: var(--mare);
+  box-shadow: 0 0 0 3px var(--bad-soft);
+}
+
+/* Contorul de caractere (ex: 12/100) */
+.charCount {
+  align-self: flex-end;
+  color: var(--subtle);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Mesajul de eroare (clasa globala .error), aliniat la stanga langa campuri */
+.form :global(.error) {
+  margin: 0;
+  padding: 10px 13px;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+/* Butonul ADAUGA APARATUL: gradient de accent, cu glow */
+.submit {
+  padding: 13px 18px;
+  border: 0;
+  border-radius: var(--control-radius);
+  background: var(--accent-gradient);
+  color: var(--accent-contrast);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 22px var(--accent-glow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 12px 28px var(--accent-glow);
+}
+
+.submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Buton dezactivat cat timp se trimite */
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Explicatia de sub buton */
+.hint {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.hint strong {
+  color: var(--bad);
+}

@@ -1,0 +1,412 @@
+/* =========================================================
+   PAGINA DE DETALIU A UNUI APARAT
+========================================================= */
+
+/* Panoul de detaliu: mai aerisit si limitat ca latime */
+.detail {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 36px;
+}
+
+/* Poza in stanga, prezentarea in dreapta */
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 38px;
+  align-items: start;
+}
+
+/* Poza mare, cu rama in culoarea accentului */
+.img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--card-radius);
+  object-fit: cover;
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Aparat defect: poza alb-negru */
+.imgDefect {
+  filter: var(--defect-filter);
+  opacity: var(--defect-opacity);
+}
+
+/* Emoji-ul mai mare cand aparatul nu are poza */
+.placeholder span {
+  font-size: 7rem;
+}
+
+/* Codul #SYS-001 de sub poza */
+.sysCode {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 14px;
+  border: 1px solid var(--chip-border);
+  border-radius: 8px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+/* Numele aparatului, cu acelasi gradient ca titlul mare */
+.title {
+  margin: 0 0 18px;
+  background: var(--title-fill);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: var(--title-glow);
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: var(--display-weight);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: var(--display-transform);
+}
+
+/* Campurile scurte (grupa, stare, tip, nivel) intr-o grila de doua perechi pe rand */
+.fields {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content 1fr;
+  gap: 12px 18px;
+  align-items: center;
+  margin: 0 0 26px;
+  padding: 16px 18px;
+  border: 1px solid var(--divider);
+  border-radius: 14px;
+  background: var(--accent-soft);
+}
+
+.fields dt {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.fields dd {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Titlurile mici de sectiune (CE FACE EXERCITIUL, MUSCHI LUCRATI...) */
+.section h3,
+.block h3 {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section p,
+.block p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Muschii lucrati: etichete, principalii pline, secundarii doar conturate */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 6px 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--text-strong);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tagSecondary {
+  border-color: var(--border);
+  border-style: dashed;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Legenda mica de sub etichete */
+.section .legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--subtle);
+  font-size: 0.78rem;
+}
+
+.dotMain,
+.dotSecondary {
+  width: 10px;
+  height: 10px;
+  margin-left: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--accent-soft);
+}
+
+.dotMain { margin-left: 0; }
+
+.dotSecondary {
+  border-style: dashed;
+  border-color: var(--border);
+  background: transparent;
+}
+
+/* Executia si greselile, pe doua coloane sub prezentare */
+.columns {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* Caseta unei sectiuni mari (executie, greseli, program) */
+.block {
+  padding: 22px 24px;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  background: var(--texture), var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.columns + .block,
+.grid + .block {
+  margin-top: 24px;
+}
+
+/* Pasii de executie: numere in cercuri de accent */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: pas;
+}
+
+.steps li {
+  position: relative;
+  padding-left: 44px;
+  color: var(--text);
+  line-height: 1.6;
+  counter-increment: pas;
+}
+
+.steps li::before {
+  content: counter(pas);
+  position: absolute;
+  top: -2px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: var(--accent-contrast);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Respiratia, sub pasi */
+.block .breath {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--divider);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.breath strong {
+  color: var(--text-strong);
+}
+
+/* Greselile frecvente: lista cu X in culoarea starii "defect" */
+.mistakes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mistakes li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.mistakes li::before {
+  content: "✕";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--bad-border);
+  border-radius: 50%;
+  background: var(--bad-soft);
+  color: var(--bad);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+/* Sfatul antrenorului: caseta cu bara de accent */
+.block .tip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  background: var(--accent-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tip strong {
+  color: var(--accent);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Tabelul cu programul recomandat */
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider);
+  color: var(--text);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: var(--accent-soft);
+  color: var(--muted);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody tr:hover {
+  background: var(--chip-bg);
+}
+
+.table strong {
+  color: var(--text-strong);
+  font-size: 1.02rem;
+}
+
+/* Pastila nivelului (Incepator / Intermediar / Avansat) */
+.level {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--chip-border);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Nota de sub tabel */
+.block .note {
+  margin-top: 12px;
+  color: var(--subtle);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .grid,
+  .columns { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .detail { padding: 22px 14px; }
+  .title { font-size: 1.6rem; }
+  .fields { grid-template-columns: max-content 1fr; }
+  .block { padding: 18px 16px; }
+
+  /* Pe telefon, fiecare rand din tabel devine o mica fisa */
+  .tableWrap { border: 0; }
+  .table thead { display: none; }
+  .table tr {
+    display: block;
+    margin-bottom: 12px;
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+  }
+  .table th,
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    text-align: right;
+  }
+  .table td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .table tbody tr:last-child th,
+  .table tbody tr:last-child td { border-bottom: 1px solid var(--divider); }
+  .table tbody tr td:last-child { border-bottom: 0; }
+}

@@ -36,3 +36,8 @@ export function updateAparat(id, changes) {
 export function deleteAparat(id) {
   return request(`/aparate/${id}`, { method: "DELETE" });
 }
+
+// Etapa 8: un singur aparat, pentru pagina de detaliu
+export function fetchAparat(id) {
+  return request(`/aparate/${id}`);
+}

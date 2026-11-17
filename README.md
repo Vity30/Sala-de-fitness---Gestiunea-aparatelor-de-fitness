@@ -40,7 +40,9 @@ Open `index.html` in a browser. No build step, no server.
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
 - [x] Stage 6: data from a mock API
-- [ ] Stage 7: form and validation
+- [x] Stage 7: form and validation
+- [x] Stage 8: routing and detail page
+- [ ] Stage 9: own backend with Express
 
 ---
 
@@ -192,3 +194,50 @@ goes to the API before it shows up in the list.
 | S7-R6 | tw.json and the data-testid attributes | [tw.json](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/tw.json), [AparatCard.jsx#L21-L84](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatCard.jsx#L21-L84) | querySelectorAll in the console |
 | S7-R7 | README Stage 7 section + AI log | [README.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/README.md), [ai-log/etapa-07.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/ai-log/etapa-07.md) | read |
 | S7-R8 | commit "Stage 7" pushed | [link commit](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/3d3c5efaf5af5e6c2b3cb739f1427184230918cf) | commit history |
+
+---
+
+## Stage 8: routing and detail page
+
+The app is split into pages with React Router:
+
+| Address | Page |
+| --- | --- |
+| `/` | the list: equipment status, add form, cards |
+| `/aparate/:id` | detail page of one machine |
+| `/despre` | about the app |
+| anything else | "page not found" |
+
+The header (title, navigation, theme button) is shared by all pages through a `Layout`
+component; `NavLink` marks the current page. Each card's title links to its detail page.
+
+The detail page shows what only fits there: what the exercise does, the muscles worked
+(main and secondary), step-by-step execution, breathing, common mistakes, a coach tip
+and a recommended program per level (sets x reps, weight as % of 1RM, rest).
+These fields were added to `db.json`: `tip`, `nivel`, `descriere`, `muschiPrincipali`,
+`muschiSecundari`, `pasi`, `respiratie`, `greseli`, `sfat`, `program`.
+
+Styles moved to CSS Modules: each component has its own `.module.css` next to it, and
+`index.css` keeps only the theme variables and the shared classes. Both themes are sets of
+CSS variables: dark (black, yellow and amber) and light ("sand and amber", a softer
+daytime version of the dark theme). Switching themes fades smoothly in Chrome and Edge.
+
+### How to run
+
+    cd frontend
+    npm install
+    npm run api   # terminal 1, http://localhost:3001
+    npm run dev   # terminal 2, http://localhost:5173
+
+## Checklist Etapa 8
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S8-R1 | routes and shared layout with navigation | [App.jsx#L12-L19](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/App.jsx#L12-L19), [Layout.jsx#L59-L66](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/Layout.jsx#L59-L66) | click Aparate / Despre |
+| S8-R2 | card title links to the detail page | [AparatCard.jsx#L41](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatCard.jsx#L41) | click a title, address becomes /aparate/3 |
+| S8-R3 | detail page reads the id, handles a missing item | [AparatDetaliuPage.jsx#L9-L57](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/pages/AparatDetaliuPage.jsx#L9-L57), [api.js#L41](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/api.js#L41) | open /aparate/999 |
+| S8-R4 | 404 page for unknown addresses | [App.jsx#L17](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/App.jsx#L17), [NotFoundPage.jsx](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/pages/NotFoundPage.jsx) | open /ceva |
+| S8-R5 | CSS Modules, index.css keeps only shared styles | [src/components](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/tree/HASH/frontend/src/components), [index.css](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/index.css) | open folders |
+| S8-R6 | data-testid for nav, item-link, detail, not-found | [Layout.jsx#L59](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/Layout.jsx#L59), [AparatCard.jsx#L41](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatCard.jsx#L41) | querySelectorAll in the console |
+| S8-R7 | README Stage 8 section + AI log | [README.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/README.md), [ai-log/etapa-08.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/ai-log/etapa-08.md) | read |
+| S8-R8 | commit "Stage 8" pushed | [link commit](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/HASH) | commit history |

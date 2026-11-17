@@ -1,14 +1,7 @@
 import { useState } from "react";
+import { GRUPE } from "../constants.js";
+import styles from "./AparatForm.module.css";
 
-// Grupele musculare: "value" este exact ca in db.json, "label" este ce vede utilizatorul
-const GRUPE = [
-  { value: "Legs", label: "Picioare" },
-  { value: "Push", label: "Piept" },
-  { value: "Pull", label: "Spate" },
-  { value: "Arms", label: "Brate" },
-  { value: "Cardio", label: "Cardio" },
-  { value: "Core", label: "Abdomen" },
-];
 const NUME_MAX = 100;
 
 // Formular controlat: state-ul React este sursa de adevar pentru campuri
@@ -48,8 +41,8 @@ export default function AparatForm({ onAdd }) {
   }
 
   return (
-    <form className="task-form" onSubmit={handleSubmit} noValidate data-testid="form">
-      <label>
+    <form className={styles.form} onSubmit={handleSubmit} noValidate data-testid="form">
+      <label className={styles.field}>
         Nume aparat
         <input
           type="text"
@@ -60,12 +53,12 @@ export default function AparatForm({ onAdd }) {
           aria-invalid={Boolean(eroare)}
           data-testid="form-title"
         />
-        <span className="char-count">
+        <span className={styles.charCount}>
           {nume.length}/{NUME_MAX}
         </span>
       </label>
 
-      <label>
+      <label className={styles.field}>
         Grupa musculara
         <select
           value={grupa}
@@ -88,14 +81,14 @@ export default function AparatForm({ onAdd }) {
 
       <button
         type="submit"
-        className="btn-submit"
+        className={styles.submit}
         disabled={trimite}
         data-testid="form-submit"
       >
         {trimite ? "Se salveaza..." : "Adauga aparatul"}
       </button>
 
-      <p className="form-hint">
+      <p className={styles.hint}>
         Aparatele noi apar ca <strong>defecte</strong> pana sunt verificate.
         Bifeaza-le din lista cand sunt functionale.
       </p>

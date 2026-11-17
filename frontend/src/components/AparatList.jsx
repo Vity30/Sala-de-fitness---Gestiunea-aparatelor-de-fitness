@@ -1,6 +1,7 @@
 import AparatCard from "./AparatCard.jsx";
+import styles from "./AparatList.module.css";
 
-export default function AparatList({ aparate, onToggle, onDelete, onSelect }) {
+export default function AparatList({ aparate, onToggle, onDelete }) {
   // Daca lista este goala, afisam un mesaj simplu
   if (aparate.length === 0) {
     return (
@@ -11,15 +12,13 @@ export default function AparatList({ aparate, onToggle, onDelete, onSelect }) {
   }
 
   return (
-    <ul className="task-list">
-      {/* Parcurgem fiecare aparat din lista si generam cate un card */}
+    <ul className={styles.list}>
       {aparate.map((aparat) => (
         <AparatCard
           key={aparat.id}
           aparat={aparat}
           onToggle={onToggle}
           onDelete={onDelete}
-          onSelect={onSelect}
         />
       ))}
     </ul>
