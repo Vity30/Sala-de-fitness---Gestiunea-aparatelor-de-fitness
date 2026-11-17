@@ -1,3 +1,13 @@
+// Emoji folosit cand un aparat nu are poza (de exemplu, unul adaugat din formular)
+const EMOJI_GRUPA = {
+  Legs: "🦵",
+  Push: "🏋️",
+  Pull: "🦍",
+  Arms: "🦾",
+  Cardio: "🏃",
+  Core: "🤸",
+};
+
 export default function AparatCard({ aparat, onToggle, onDelete, onSelect }) {
   const esteFunctional = aparat.functional;
 
@@ -8,33 +18,52 @@ export default function AparatCard({ aparat, onToggle, onDelete, onSelect }) {
   const codAparat = `#SYS-${String(aparat.id).padStart(3, "0")}`;
 
   return (
-    <li className="task-card">
-      {/* 1. Click pe imagine: apeleaza onSelect(id) si te duce in pagina urmatoare de detalii */}
-      <img
-        src={aparat.img}
-        alt={aparat.nume}
-        className="card-img clickable"
-        loading="lazy"
-        onClick={() => onSelect(aparat.id)}
-        title="Vezi detalii exercitiu"
-      />
+    <li
+      className={esteFunctional ? "task-card" : "task-card done"}
+      data-testid="item"
+      data-id={aparat.id}
+    >
+      {/* 1. Click pe imagine: deschide pagina de detalii */}
+      {aparat.img ? (
+        <img
+          src={aparat.img}
+          alt={aparat.nume}
+          className="card-img clickable"
+          loading="lazy"
+          onClick={() => onSelect(aparat.id)}
+          title="Vezi detalii exercitiu"
+        />
+      ) : (
+        <div
+          className="card-img card-img-placeholder clickable"
+          onClick={() => onSelect(aparat.id)}
+          title="Vezi detalii exercitiu"
+          role="img"
+          aria-label={`${aparat.nume}, fara poza`}
+        >
+          <span aria-hidden="true">{EMOJI_GRUPA[aparat.grupa] ?? "🏋️"}</span>
+          <small>Fara poza</small>
+        </div>
+      )}
 
       <div className="task-main">
-        {/* 2. Casuta de bifat (checkbox): este independenta, schimba doar starea de functionare */}
+        {/* 2. Checkbox-ul schimba doar starea de functionare */}
         <input
           type="checkbox"
           checked={esteFunctional}
           onChange={() => onToggle(aparat.id)}
           title="Schimba starea de functionare"
+          aria-label={`Functional: ${aparat.nume}`}
+          data-testid="item-toggle"
         />
-        
-        {/* 3. Click pe titlu: apeleaza si el onSelect(id) pentru a deschide detaliile */}
-        <div 
-          className="card-content clickable" 
+
+        {/* 3. Click pe titlu: deschide pagina de detalii */}
+        <div
+          className="card-content clickable"
           onClick={() => onSelect(aparat.id)}
           title="Vezi detalii exercitiu"
         >
-          <h3>{aparat.nume}</h3>
+          <h3 data-testid="item-title">{aparat.nume}</h3>
         </div>
       </div>
 
@@ -50,6 +79,7 @@ export default function AparatCard({ aparat, onToggle, onDelete, onSelect }) {
           className="btn-danger"
           onClick={() => onDelete(aparat.id)}
           aria-label={`Sterge ${aparat.nume}`}
+          data-testid="item-delete"
         >
           Sterge
         </button>

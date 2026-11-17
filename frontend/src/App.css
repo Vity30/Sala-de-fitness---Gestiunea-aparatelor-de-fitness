@@ -944,3 +944,289 @@ html[data-theme="light"] .muschi-tag {
   text-align: center;
   font-weight: 500;
 }
+/* =========================================================
+   ETAPA 7: FORMULAR, LAYOUT PE DOUA COLOANE, CARD DEFECT
+========================================================= */
+
+/* Pagina principala: formularul in stanga (1fr), lista in dreapta (2fr) */
+.container-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Panoul cu formularul ramane vizibil cand derulezi lista */
+.panel-form {
+  position: sticky;
+  top: 20px;
+}
+
+/* In coloana din dreapta: cate carduri incap (minim 250px fiecare),
+   deci 3 pe ecran lat, 2 pe laptop/tableta si 1 pe telefon */
+.container-split .task-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
+
+/* Pe ecran lat pagina principala se lateste ca sa incapa 3 carduri pe rand */
+@media (min-width: 1500px) {
+  .container.container-split {
+    max-width: 1480px;
+  }
+}
+
+/* Formularul: campurile unul sub altul */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Eticheta de deasupra fiecarui camp (NUME APARAT, GRUPA MUSCULARA) */
+.task-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--muted);
+  font-family: "Sora", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Campul text si lista derulanta: fundal inchis, bordura galbena discreta */
+.task-form input[type="text"],
+.task-form select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-form input::placeholder {
+  color: #5f5f68;
+}
+
+.task-form select option {
+  background: #141417;
+  color: var(--text);
+}
+
+/* Campul activ: bordura galbena cu halou */
+.task-form input[type="text"]:focus,
+.task-form select:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 210, 26, 0.15);
+}
+
+/* Etapa 7: campul gresit este marcat cu rosu (aria-invalid) */
+.task-form input[type="text"][aria-invalid="true"] {
+  border-color: var(--mare);
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.15);
+}
+
+/* Contorul de caractere de sub numele aparatului (ex: 12/100) */
+.char-count {
+  align-self: flex-end;
+  color: var(--muted);
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Mesajul de eroare al formularului, aliniat la stanga, langa campuri */
+.task-form .error {
+  margin: 0;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+/* Butonul ADAUGA APARATUL: galben plin, cu glow */
+.btn-submit {
+  padding: 12px 16px;
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  background: var(--yellow);
+  color: #0b0b0d;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(255, 210, 26, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: var(--yellow-soft);
+  box-shadow: 0 0 26px rgba(255, 210, 26, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Etapa 7: buton dezactivat cat timp se trimite */
+.task-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Explicatia de sub buton (aparatele noi pornesc ca defecte) */
+.form-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.form-hint strong {
+  color: var(--bad);
+}
+
+/* Locul pozei pentru aparatele fara imagine: emoji pe fundal hasurat */
+.card-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px dashed var(--line);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 210, 26, 0.14), transparent 62%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 10px, transparent 10px 20px),
+    #18181c;
+}
+
+.card-img-placeholder span {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.card-img-placeholder small {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* In pagina de detalii emoji-ul este mai mare */
+.detail-img.card-img-placeholder span {
+  font-size: 7rem;
+}
+
+/* Cardul unui aparat defect: poza alb-negru si titlu estompat */
+.task-card.done .card-img {
+  filter: grayscale(1) brightness(0.72);
+}
+
+.task-card.done .card-content h3 {
+  color: var(--muted);
+}
+
+/* Tablete si telefoane: panourile stau unul sub altul */
+@media (max-width: 900px) {
+  .container-split {
+    grid-template-columns: 1fr;
+  }
+  .panel-form {
+    position: relative; /* nu static: colturile decorative raman pe panou */
+  }
+}
+
+
+/* ---------- Etapa 7 in modul luminos (stilul industrial) ---------- */
+
+/* Etichetele campurilor: text inchis */
+html[data-theme="light"] .task-form label {
+  color: #0f172a !important;
+}
+
+/* Campurile: alb, bordura groasa bleumarin, umbra decalata */
+html[data-theme="light"] .task-form input[type="text"],
+html[data-theme="light"] .task-form select {
+  background: #f8fafc !important;
+  border: 2px solid #0f172a !important;
+  border-radius: 0 !important;
+  color: #0f172a !important;
+  box-shadow: 3px 3px 0 #0f172a !important;
+}
+
+html[data-theme="light"] .task-form input::placeholder {
+  color: #64748b !important;
+}
+
+html[data-theme="light"] .task-form select option {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Campul activ: umbra portocalie */
+html[data-theme="light"] .task-form input[type="text"]:focus,
+html[data-theme="light"] .task-form select:focus {
+  border-color: #ea580c !important;
+  box-shadow: 3px 3px 0 #ea580c !important;
+}
+
+/* Campul gresit: bordura si umbra rosii */
+html[data-theme="light"] .task-form input[type="text"][aria-invalid="true"] {
+  border-color: #e11d48 !important;
+  box-shadow: 3px 3px 0 #e11d48 !important;
+}
+
+/* Contorul si explicatia: gri inchis, lizibil pe panoul deschis */
+html[data-theme="light"] .char-count,
+html[data-theme="light"] .form-hint {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] .form-hint strong {
+  color: #be123c !important;
+}
+
+/* Butonul de trimitere: portocaliu cu umbra bleumarin */
+html[data-theme="light"] .btn-submit {
+  background: #ea580c !important;
+  color: #0f172a !important;
+  border: 2px solid #0f172a !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 #0f172a !important;
+  transform: none !important;
+}
+
+html[data-theme="light"] .btn-submit:hover:not(:disabled) {
+  background: #0f172a !important;
+  color: #ea580c !important;
+}
+
+/* Mesajul de eroare din formular: colturi drepte, ca restul temei */
+html[data-theme="light"] .task-form .error {
+  border: 2px solid #e11d48 !important;
+  border-radius: 0 !important;
+}
+
+/* Locul pozei: hasura gri deschis */
+html[data-theme="light"] .card-img-placeholder {
+  background: repeating-linear-gradient(45deg, #cbd5e1 0 10px, #e2e8f0 10px 20px) !important;
+}
+
+html[data-theme="light"] .card-img-placeholder small {
+  color: #334155 !important;
+}
+
+/* Titlul unui aparat defect: gri, nu negru */
+html[data-theme="light"] .task-card.done .card-content h3 {
+  color: #475569 !important;
+}

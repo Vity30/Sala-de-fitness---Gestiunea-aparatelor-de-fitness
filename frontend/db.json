@@ -59,6 +59,18 @@
       "descriere": "Permite adaugarea de greutate progresiva pentru antrenamentul...",
       "executie": "Aseaza-te pe scaun si fixeaza picioarele sub suporturi...",
       "muschi": "Dreptul abdominal, Oblici"
+    },
+    {
+      "nume": "Extensii",
+      "grupa": "Legs",
+      "functional": true,
+      "id": 7
+    },
+    {
+      "nume": "Aparat de impins",
+      "grupa": "Push",
+      "functional": true,
+      "id": 8
     }
   ]
 }

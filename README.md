@@ -173,3 +173,22 @@ npm run dev     # terminal 2, http://localhost:5173
 | S6-R5 | fetch only in api.js, URL from env | frontend/src/api.js, frontend/.env.example | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | README.md, ai-log/etapa-06.md | read |
 | S6-R7 | commit "Stage 6" pushed | https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/51efb5d14c145e99835c566ef78fb1a97b0981e2 | check commit history |
+
+## Stage 7: form and validation
+
+New machines can be added from the page. The form is controlled and validated
+(name required, max 100 characters), and every change (add, toggle, delete)
+goes to the API before it shows up in the list.
+
+## Checklist Etapa 7
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S7-R1 | controlled form: value + onChange on every field | [AparatForm.jsx#L51-L95](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatForm.jsx#L51-L95) | read |
+| S7-R2 | empty name shows an error, nothing is sent | [AparatForm.jsx#L22-L35](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatForm.jsx#L22-L35) | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh | [App.jsx#L58-L62](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/App.jsx#L58-L62), [api.js#L22-L25](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/api.js#L22-L25) | add, refresh |
+| S7-R4 | toggle and delete survive refresh | [App.jsx#L65-L86](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/App.jsx#L65-L86) | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | [AparatForm.jsx#L36-L47](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatForm.jsx#L36-L47) | --delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes | [tw.json](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/tw.json), [AparatCard.jsx#L21-L84](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/frontend/src/components/AparatCard.jsx#L21-L84) | querySelectorAll in the console |
+| S7-R7 | README Stage 7 section + AI log | [README.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/README.md), [ai-log/etapa-07.md](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/blob/HASH/ai-log/etapa-07.md) | read |
+| S7-R8 | commit "Stage 7" pushed | [link commit](https://github.com/Vity30/Sala-de-fitness---Gestiunea-aparatelor-de-fitness/commit/HASH) | commit history |

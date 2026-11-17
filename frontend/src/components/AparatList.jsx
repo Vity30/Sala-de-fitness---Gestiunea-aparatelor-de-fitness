@@ -3,7 +3,11 @@ import AparatCard from "./AparatCard.jsx";
 export default function AparatList({ aparate, onToggle, onDelete, onSelect }) {
   // Daca lista este goala, afisam un mesaj simplu
   if (aparate.length === 0) {
-    return <p className="empty">Nu exista niciun aparat inregistrat.</p>;
+    return (
+      <p className="empty" data-testid="empty">
+        Nu exista niciun aparat inregistrat.
+      </p>
+    );
   }
 
   return (
