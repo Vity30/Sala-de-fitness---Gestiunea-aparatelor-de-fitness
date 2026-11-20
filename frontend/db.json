@@ -8,29 +8,51 @@
       "img": "/img/PresaPicioare.jpg",
       "tip": "Compus",
       "nivel": "Incepator",
-      "descriere": "Presa pentru picioare este un exercitiu compus pentru partea inferioara a corpului. Spatele ramane sprijinit pe spatar, asa ca poti lucra cu greutati mari fara sa incarci coloana, ceea ce il face potrivit si pentru incepatori. Pozitia talpilor schimba accentul: mai jos si mai ingust lucreaza mai mult cvadricepsii, mai sus si mai lat implica mai mult fesierii si ischiogambierii.",
-      "muschiPrincipali": ["Cvadriceps", "Fesieri"],
-      "muschiSecundari": ["Ischiogambieri", "Adductori", "Gambe"],
+      "descriere": "Presa e unul dintre cele mai bune aparate pentru picioare, mai ales daca abia te apuci de sala. Stai cu spatele sprijinit, asa ca poti impinge greutati serioase fara sa-ti incarci coloana, cum se intampla usor la genuflexiunile facute gresit. Lucreaza in principal coapsele din fata si fesierii, iar locul in care iti pui talpile pe platforma decide care dintre ei munceste mai mult.",
+      "muschiPrincipali": [
+        "Cvadriceps",
+        "Fesieri"
+      ],
+      "muschiSecundari": [
+        "Ischiogambieri",
+        "Adductori",
+        "Muschii trunchiului (stabilizare)"
+      ],
       "pasi": [
-        "Aseaza-te cu spatele si bazinul lipite de spatar si prinde manerele laterale.",
-        "Pune talpile pe mijlocul platformei, la latimea umerilor, cu varfurile usor orientate in afara.",
-        "Impinge platforma pana aproape de extensie si elibereaza sistemul de siguranta.",
-        "Coboara controlat, in 2-3 secunde, pana cand genunchii ajung la aproximativ 90 de grade, fara ca bazinul sa se ridice de pe spatar.",
-        "Impinge prin calcaie si mijlocul talpii pana sus, fara sa blochezi complet genunchii.",
-        "La final, reactiveaza sistemul de siguranta inainte sa iei picioarele de pe platforma."
+        "Aseaza-te cu spatele si fundul bine lipite de spatar.",
+        "Pune talpile pe mijlocul platformei, la latimea umerilor, cu varfurile putin orientate spre exterior.",
+        "Impinge platforma pana aproape sus, apoi deblocheaza manerele de siguranta.",
+        "Coboara incet, in 2-3 secunde. Te opresti in punctul in care simti ca bazinul ar incepe sa se desprinda de spatar; la cei mai multi oameni asta inseamna genunchii cam la 90 de grade.",
+        "Impinge inapoi prin toata talpa, cu greutatea mai mult pe calcaie, si opreste-te inainte sa intinzi complet genunchii.",
+        "Cand termini seria, blocheaza din nou sistemul de siguranta si abia apoi da picioarele jos."
       ],
-      "respiratie": "Inspiri la coborare si expiri in timp ce impingi platforma.",
+      "respiratie": "Tragi aer in piept cand cobori si il dai afara cand impingi. Nu-ti tine respiratia pe toata repetarea.",
       "greseli": [
-        "Blocarea completa a genunchilor in partea de sus.",
-        "Coborarea prea adanca, pana cand bazinul se ridica de pe spatar si spatele se rotunjeste.",
-        "Genunchii care cad spre interior in timpul impingerii.",
-        "Ridicarea calcaielor de pe platforma."
+        "Genunchii blocati complet sus: greutatea trece de pe muschi direct pe articulatie.",
+        "Coborarea prea adanca: bazinul se ridica de pe spatar, spatele se rotunjeste si partea de jos a coloanei preia presiunea.",
+        "Genunchii care se strang spre interior cand impingi. Tine-i pe directia varfurilor.",
+        "Calcaiele care se ridica de pe platforma, de obicei pentru ca talpile sunt asezate prea jos."
       ],
-      "sfat": "Pune talpile mai sus pe platforma ca sa lucrezi mai mult fesierii si mai jos pentru accent pe cvadricepsi.",
+      "sfat": "Vrei sa lucreze mai mult fesierii? Urca talpile mai sus pe platforma. Vrei mai mult partea din fata a coapsei? Coboara-le putin, dar ai grija: pozitia joasa solicita mai mult genunchii.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 12-15", "intensitate": "50-60% din 1RM (3-4 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Intermediar", "volum": "4 x 8-12", "intensitate": "65-75% din 1RM (2-3 repetari in rezerva)", "pauza": "90-120 s" },
-        { "nivel": "Avansat", "volum": "4-5 x 6-8", "intensitate": "75-85% din 1RM (1-2 repetari in rezerva)", "pauza": "2-3 min" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-12",
+          "intensitate": "60-70% din 1RM (2-3 repetari in rezerva)",
+          "pauza": "90 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3-4 x 8-12",
+          "intensitate": "70-80% din 1RM (1-2 repetari in rezerva)",
+          "pauza": "1,5-2 min"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "4-5 x 6-10",
+          "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
+          "pauza": "2-3 min"
+        }
       ]
     },
     {
@@ -41,29 +63,48 @@
       "img": "/img/FluturariPiept.jpg",
       "tip": "Izolare",
       "nivel": "Incepator",
-      "descriere": "Aparatul pentru fluturari, numit si Pec Deck, izoleaza muschii pieptului printr-o miscare de apropiere a bratelor in fata corpului. Traiectoria este ghidata de aparat, deci te poti concentra pe contractia pieptului fara sa iti faci griji pentru echilibru. Se foloseste de obicei dupa exercitiile de impins, pentru finisare.",
-      "muschiPrincipali": ["Pectoral mare"],
-      "muschiSecundari": ["Deltoid anterior", "Pectoral mic"],
+      "descriere": "La fluturari aduci bratele unul spre celalalt in fata pieptului, ca si cum ai imbratisa un copac mare. Aparatul tine miscarea pe traseul corect, asa ca toata atentia ta poate merge pe piept. E un exercitiu de izolare: nu construiesti forta mare cu el, dar e foarte bun la finalul antrenamentului, dupa exercitiile de impins.",
+      "muschiPrincipali": [
+        "Pectoral mare"
+      ],
+      "muschiSecundari": [
+        "Deltoid anterior"
+      ],
       "pasi": [
-        "Regleaza inaltimea scaunului astfel incat manerele sa fie la nivelul pieptului, iar bratele aproximativ paralele cu solul.",
-        "Sprijina spatele de spatar si prinde manerele sau pune antebratele pe perne, in functie de model.",
-        "Pastreaza coatele usor flexate pe toata durata miscarii.",
-        "Apropie bratele in fata pieptului intr-un arc larg, pana cand manerele aproape se ating.",
-        "Mentine contractia o secunda, strangand pieptul.",
-        "Revino controlat, in 2-3 secunde, pana simti o intindere usoara in piept, fara sa lasi bratele sa treaca mult in spatele corpului."
+        "Regleaza scaunul astfel incat manerele sa fie la nivelul mijlocului pieptului, iar coatele cam la inaltimea umerilor.",
+        "Lipeste spatele de spatar, scoate putin pieptul in fata si trage umerii in jos si spre spate.",
+        "Prinde manerele cu coatele usor indoite. Unghiul asta ramane la fel pe toata miscarea.",
+        "Adu bratele in fata intr-un arc larg, pana cand mainile aproape se ating.",
+        "Strange pieptul o secunda, ca si cum ai vrea sa tii o foaie de hartie intre palme.",
+        "Lasa bratele sa se deschida incet, in 2-3 secunde, pana simti o intindere placuta in piept. Nu le lasa sa fuga mult in spatele corpului."
       ],
-      "respiratie": "Expiri cand apropii bratele si inspiri la revenire.",
+      "respiratie": "Dai aerul afara cand inchizi bratele si il tragi in piept cand le deschizi.",
       "greseli": [
-        "Greutate prea mare, care te obliga sa impingi cu umerii si sa pierzi contractia pieptului.",
-        "Desprinderea spatelui de spatar.",
-        "Revenirea prea ampla, care forteaza articulatia umarului.",
-        "Miscarea facuta din smucituri, nu controlat."
+        "Coatele care se indoaie tot mai mult ca sa misti greutatea: exercitiul devine un impins si pieptul lucreaza mai putin.",
+        "Umerii ridicati spre urechi. Tine-i jos pe toata seria.",
+        "Deschiderea prea mare, cu bratele mult in spatele corpului, care forteaza articulatia umarului.",
+        "Greutate prea mare, miscata din smucituri in loc de un ritm controlat."
       ],
-      "sfat": "Gandeste-te ca vrei sa iti apropii coatele unul de altul, nu mainile: asa simti mai bine pieptul.",
+      "sfat": "Gandeste-te ca vrei sa-ti apropii coatele, nu mainile. Pare un detaliu, dar asa simti imediat pieptul.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 12-15", "intensitate": "usoara, controlezi fiecare repetare (3-4 in rezerva)", "pauza": "60 s" },
-        { "nivel": "Intermediar", "volum": "3-4 x 10-12", "intensitate": "moderata (2-3 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Avansat", "volum": "4 x 8-12", "intensitate": "moderata-grea (0-2 repetari in rezerva)", "pauza": "60-90 s" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-15",
+          "intensitate": "usoara-moderata (2-3 repetari in rezerva)",
+          "pauza": "60 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3 x 10-12",
+          "intensitate": "moderata (1-2 repetari in rezerva)",
+          "pauza": "60-90 s"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "3-4 x 8-15",
+          "intensitate": "grea, ultima serie aproape de epuizare",
+          "pauza": "60-90 s"
+        }
       ]
     },
     {
@@ -74,29 +115,51 @@
       "img": "/img/Helcometru.jpg",
       "tip": "Compus",
       "nivel": "Incepator",
-      "descriere": "La helcometru tragi o bara de sus spre piept, cu o greutate pe care o alegi tu. Este alternativa la tractiunile la bara, dezvolta latimea spatelui si ajuta postura. Este potrivit si pentru cine nu poate face inca tractiuni.",
-      "muschiPrincipali": ["Marele dorsal"],
-      "muschiSecundari": ["Romboizi", "Trapez", "Biceps", "Deltoid posterior"],
+      "descriere": "La helcometru tragi o bara de sus pana la piept, cu greutatea pe care o alegi tu. E exercitiul care face spatele lat si ajuta mult la postura, mai ales daca stai multe ore pe scaun. Daca inca nu poti face tractiuni la bara, aici construiesti forta de care ai nevoie pentru ele.",
+      "muschiPrincipali": [
+        "Marele dorsal"
+      ],
+      "muschiSecundari": [
+        "Romboizi",
+        "Trapez",
+        "Biceps",
+        "Deltoid posterior"
+      ],
       "pasi": [
-        "Regleaza perna pentru coapse astfel incat sa te tina fix pe scaun, cu talpile pe sol.",
-        "Prinde bara cu o priza putin mai lata decat umerii, cu palmele inainte.",
-        "Ridica pieptul si inclina usor spatele inapoi, cam 10-20 de grade.",
-        "Coboara intai omoplatii, apoi trage bara spre partea de sus a pieptului, ducand coatele in jos si spre spate.",
-        "Strange omoplatii o secunda cand bara ajunge la piept.",
-        "Lasa bara sa urce controlat pana cand bratele sunt aproape intinse si simti intinderea in spate."
+        "Regleaza perna de pe coapse astfel incat sa te tina bine pe scaun, cu talpile pe podea.",
+        "Prinde bara cu palmele inainte, putin mai larg decat umerii.",
+        "Stai cu pieptul sus si lasa-te usor pe spate, doar cat sa nu-ti atinga bara nasul cand coboara.",
+        "Porneste miscarea coborand umerii, apoi trage bara spre partea de sus a pieptului, cu coatele in jos si spre spate.",
+        "Cand bara ajunge la piept, strange omoplatii o secunda.",
+        "Lasa bara sa urce controlat, pana cand bratele sunt aproape intinse si simti spatele cum se intinde."
       ],
-      "respiratie": "Expiri cand tragi bara in jos si inspiri cand o lasi sa urce.",
+      "respiratie": "Dai aerul afara cand tragi bara in jos si il tragi in piept cand o lasi sa urce.",
       "greseli": [
-        "Tragerea barei la ceafa, care incarca umerii.",
-        "Balansul trunchiului pe spate pentru a misca o greutate prea mare.",
-        "Tragerea doar din brate, fara coborarea omoplatilor.",
-        "Lasarea barei sa urce brusc."
+        "Tragerea barei la ceafa. Nu lucreaza spatele mai bine si forteaza umerii si gatul, asa ca antrenorii o evita.",
+        "Balansul pe spate ca sa misti mai multa greutate. O inclinare mica e normala, leganatul nu.",
+        "Tragerea doar din brate: simti bicepsul in loc de spate.",
+        "Bara lasata sa urce brusc, care smuceste umerii."
       ],
-      "sfat": "Imagineaza-ti ca vrei sa bagi coatele in buzunarele de la spate: asa lucreaza spatele, nu bratele.",
+      "sfat": "Imagineaza-ti ca vrei sa bagi coatele in buzunarele de la spate. E cel mai simplu truc ca sa simti spatele, nu bratele.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 10-12", "intensitate": "usoara-moderata (3 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Intermediar", "volum": "4 x 8-12", "intensitate": "65-75% din 1RM (2 repetari in rezerva)", "pauza": "90 s" },
-        { "nivel": "Avansat", "volum": "4-5 x 6-10", "intensitate": "75-85% din 1RM (1-2 repetari in rezerva)", "pauza": "2 min" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-12",
+          "intensitate": "60-70% din 1RM (2-3 repetari in rezerva)",
+          "pauza": "90 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3-4 x 8-12",
+          "intensitate": "70-80% din 1RM (1-2 repetari in rezerva)",
+          "pauza": "1,5-2 min"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "4-5 x 6-10",
+          "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
+          "pauza": "2-3 min"
+        }
       ]
     },
     {
@@ -107,28 +170,48 @@
       "img": "/img/BancaScott.jpg",
       "tip": "Izolare",
       "nivel": "Intermediar",
-      "descriere": "Banca Scott sprijina bratele pe un plan inclinat, asa ca bicepsul lucreaza izolat, fara ajutorul spatelui sau al umerilor. Se executa cu bara EZ sau cu gantere si este eficienta mai ales in partea de jos a miscarii, unde bicepsul este intins.",
-      "muschiPrincipali": ["Biceps brahial"],
-      "muschiSecundari": ["Brahial", "Brahioradial"],
+      "descriere": "Banca Scott iti sprijina bratele pe o perna inclinata, asa ca nu mai poti trisa cu spatele sau cu umerii: tot efortul ramane pe biceps. Se lucreaza de obicei cu bara EZ, cea cu forma ondulata, care e mai prietenoasa cu incheieturile. E un exercitiu pentru control si volum, nu pentru recorduri.",
+      "muschiPrincipali": [
+        "Biceps brahial"
+      ],
+      "muschiSecundari": [
+        "Brahial",
+        "Brahioradial"
+      ],
       "pasi": [
-        "Regleaza scaunul astfel incat axilele sa fie aproape de marginea de sus a pernei.",
-        "Sprijina partea din spate a bratelor pe perna si prinde bara EZ cu palmele in sus, la latimea umerilor.",
-        "Ridica bara prin flexia coatelor, pana cand antebratele sunt aproape verticale.",
+        "Regleaza scaunul astfel incat perna sa-ti intre bine sub brat, aproape de subsuoara.",
+        "Pune partea din spate a bratelor pe perna si prinde bara EZ cu palmele in sus, cam la latimea umerilor.",
+        "Ridica bara indoind coatele, pana cand antebratele ajung aproape verticale.",
         "Strange bicepsul o secunda sus.",
-        "Coboara foarte controlat, in 3 secunde, pana aproape de extensie completa, fara sa lasi bara sa cada."
+        "Coboara foarte incet, in jur de 3 secunde, pana aproape de intinderea completa a bratelor. Nu lasa bara sa cada la final."
       ],
-      "respiratie": "Expiri la ridicare si inspiri la coborare.",
+      "respiratie": "Dai aerul afara cand ridici bara si il tragi in piept cand o cobori.",
       "greseli": [
-        "Ridicarea coatelor sau a umerilor de pe perna.",
-        "Lasarea barei sa cada in partea de jos, cu risc pentru tendonul bicepsului.",
-        "Greutate prea mare si miscare scurta.",
-        "Incheieturile indoite spre spate."
+        "Bratele sau umerii care se ridica de pe perna ca sa ajute miscarea.",
+        "Bara lasata sa cada in partea de jos, exact unde bicepsul e cel mai intins si cel mai vulnerabil.",
+        "Greutate prea mare, cu repetari facute doar pe jumatate.",
+        "Incheieturile indoite spre spate. Tine-le drepte, in linie cu antebratul."
       ],
-      "sfat": "Cu greutate mare, nu intinde complet bratul jos: opreste-te cu un unghi mic in cot ca sa protejezi tendonul.",
+      "sfat": "Coborarea conteaza cel mai mult la acest exercitiu. Daca nu poti cobori incet, greutatea e prea mare.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 10-12", "intensitate": "usoara (3-4 repetari in rezerva)", "pauza": "60 s" },
-        { "nivel": "Intermediar", "volum": "3-4 x 8-12", "intensitate": "moderata (2 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Avansat", "volum": "4 x 6-10", "intensitate": "moderata-grea (1 repetare in rezerva)", "pauza": "90 s" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-15",
+          "intensitate": "usoara-moderata (2-3 repetari in rezerva)",
+          "pauza": "60 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3 x 10-12",
+          "intensitate": "moderata (1-2 repetari in rezerva)",
+          "pauza": "60-90 s"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "3-4 x 8-15",
+          "intensitate": "grea, ultima serie aproape de epuizare",
+          "pauza": "60-90 s"
+        }
       ]
     },
     {
@@ -139,29 +222,52 @@
       "img": "/img/BandaAlergare.jpg",
       "tip": "Cardio",
       "nivel": "Incepator",
-      "descriere": "Banda de alergare permite mers, mers in panta sau alergare la o viteza constanta, pe o suprafata cu amortizare. Imbunatateste rezistenta cardiovasculara si ajuta la arderea caloriilor, iar inclinarea transforma mersul intr-un antrenament intens, fara impactul alergarii.",
-      "muschiPrincipali": ["Sistem cardiovascular", "Cvadriceps", "Ischiogambieri"],
-      "muschiSecundari": ["Fesieri", "Gambe", "Abdomen (stabilizare)"],
-      "pasi": [
-        "Urca pe marginile laterale, nu pe banda, si prinde clema de siguranta de haine.",
-        "Porneste banda la o viteza mica, 3-4 km/h, si pasi pe ea cand se misca.",
-        "Incalzeste-te 5 minute in mers usor.",
-        "Creste treptat viteza sau inclinarea pana la ritmul ales.",
-        "Pastreaza corpul drept si privirea inainte, cu bratele miscandu-se natural, fara sa te tii de manere.",
-        "La final, scade viteza treptat 3-5 minute pentru revenire, apoi opreste banda."
+      "descriere": "Banda de alergare e locul unde iti faci cardio-ul in ritmul tau: mers usor, mers in panta sau alergare. Imbunatateste rezistenta si sanatatea inimii si te ajuta sa arzi calorii. Mersul in panta e o alegere foarte buna daca te dor genunchii, pentru ca loveste mult mai putin articulatiile; alergarea arde in schimb mai multe calorii pe minut.",
+      "muschiPrincipali": [
+        "Sistem cardiovascular",
+        "Cvadriceps",
+        "Ischiogambieri"
       ],
-      "respiratie": "Respiri ritmic. La intensitate moderata trebuie sa poti inca vorbi in propozitii scurte.",
+      "muschiSecundari": [
+        "Fesieri",
+        "Gambe",
+        "Abdomen (stabilizare)"
+      ],
+      "pasi": [
+        "Urca pe marginile laterale, nu direct pe banda, si prinde clema de siguranta de haine. Daca te dezechilibrezi, banda se opreste singura.",
+        "Porneste banda la o viteza mica, 3-4 km/h, si pasi pe ea abia dupa ce se misca.",
+        "Incalzeste-te 5 minute in mers usor.",
+        "Creste treptat viteza sau inclinarea pana ajungi la ritmul ales.",
+        "Stai drept, cu privirea inainte si bratele miscandu-se natural. Barele sunt pentru echilibru, nu ca sa te sprijini pe ele.",
+        "La final, scade viteza treptat 3-5 minute, ca pulsul sa revina incet, si abia apoi opreste banda."
+      ],
+      "respiratie": "Respira ritmic. Un test simplu: la intensitate moderata poti inca vorbi in propozitii scurte, dar nu ai putea canta.",
       "greseli": [
-        "Tinutul de manere sau de bord, mai ales pe inclinare.",
-        "Pasi prea lungi, cu aterizare pe calcai mult in fata corpului.",
-        "Coborarea de pe banda cat timp se misca.",
+        "Tinutul de bare, mai ales pe inclinare: corpul face mult mai putin efort decat arata aparatul.",
+        "Pasi prea lungi, cu calcaiul aterizand mult in fata corpului.",
+        "Coborarea de pe banda in timp ce se misca.",
         "Pornirea direct la viteza mare, fara incalzire."
       ],
-      "sfat": "Mersul in panta, la 8-12% inclinare si 5-6 km/h, arde multe calorii si este mai bland cu genunchii decat alergarea.",
+      "sfat": "Incearca antrenamentul 12-3-30: inclinare 12%, in jur de 4,8 km/h, 30 de minute, fara sa te tii de bare. E solicitant, dar nu iti forteaza genunchii cum o face alergarea.",
       "program": [
-        { "nivel": "Incepator", "volum": "20-25 min", "intensitate": "mers alert 5-6 km/h, inclinare 1-3%", "pauza": "-" },
-        { "nivel": "Intermediar", "volum": "30 min", "intensitate": "alergare usoara 8-9 km/h sau mers 5,5 km/h la 8-10% inclinare", "pauza": "-" },
-        { "nivel": "Avansat", "volum": "6-8 intervale de 1 min", "intensitate": "sprint 12-15 km/h", "pauza": "1-2 min de mers intre intervale" }
+        {
+          "nivel": "Incepator",
+          "volum": "20-30 min",
+          "intensitate": "mers alert 5-6 km/h, inclinare 1-2%",
+          "pauza": "-"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "30 min",
+          "intensitate": "12-3-30: inclinare 12%, aprox. 4,8 km/h",
+          "pauza": "-"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "6-8 intervale de 1 min",
+          "intensitate": "alergare rapida 11-14 km/h",
+          "pauza": "1-2 min de mers usor intre intervale"
+        }
       ]
     },
     {
@@ -172,28 +278,47 @@
       "img": "/img/AparatCrunch.jpg",
       "tip": "Izolare",
       "nivel": "Incepator",
-      "descriere": "Aparatul pentru abdomene adauga rezistenta reglabila la miscarea clasica de abdomene, asa ca poti progresa la fel ca la celelalte exercitii de forta. Traiectoria ghidata protejeaza gatul si concentreaza efortul pe dreptul abdominal.",
-      "muschiPrincipali": ["Dreptul abdominal"],
-      "muschiSecundari": ["Oblici", "Transversul abdominal"],
+      "descriere": "Aparatul pentru abdomene e varianta cu greutati a abdomenelor clasice. Avantajul e ca poti creste rezistenta treptat, ca la orice exercitiu de forta, in loc sa faci sute de repetari pe saltea. Lucreaza mai ales dreptul abdominal, adica muschii pe care ii stim drept \"patratele\".",
+      "muschiPrincipali": [
+        "Dreptul abdominal"
+      ],
+      "muschiSecundari": [
+        "Oblici"
+      ],
       "pasi": [
-        "Alege greutatea si regleaza scaunul astfel incat pernele sa fie la nivelul pieptului sau al umerilor.",
-        "Fixeaza picioarele sub suporturi si prinde manerele.",
-        "Ruleaza trunchiul in fata, apropiind coastele de bazin, ca si cum te-ai strange ca o minge.",
-        "Mentine contractia o secunda jos.",
-        "Revino controlat, fara sa lasi greutatile sa se atinga intre repetari."
+        "Alege la inceput o greutate usoara si regleaza scaunul astfel incat pernele sa stea pe piept sau pe umeri.",
+        "Prinde-ti picioarele sub suporturi, daca aparatul are, si apuca manerele.",
+        "Ruleaza trunchiul in fata, apropiind coastele de bazin, ca si cum te-ai face ghem. Miscarea vine din abdomen, nu din solduri.",
+        "Tine contractia o secunda jos.",
+        "Revino incet, fara sa lasi greutatile sa se atinga intre repetari, ca abdomenul sa ramana incordat."
       ],
-      "respiratie": "Expiri complet cand te apleci in fata si inspiri la revenire.",
+      "respiratie": "Dai tot aerul afara cand te apleci in fata; asa abdomenul se strange mai bine.",
       "greseli": [
-        "Tragerea cu bratele in loc de contractia abdomenului.",
-        "Miscarea din solduri in loc de rularea coloanei.",
-        "Greutate prea mare, care trage corpul brusc inapoi.",
-        "Tinerea respiratiei."
+        "Tragerea din brate in loc sa strangi abdomenul.",
+        "Aplecarea din solduri cu spatele drept: atunci lucreaza muschii soldului, nu abdomenul.",
+        "Greutate prea mare, care te trage brusc inapoi.",
+        "Tinutul respiratiei pe toata seria."
       ],
-      "sfat": "Gandeste-te sa apropii pieptul de bazin, nu capul de genunchi.",
+      "sfat": "Gandeste-te sa apropii pieptul de buric, nu capul de genunchi.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 12-15", "intensitate": "usoara, controlezi fiecare repetare", "pauza": "45-60 s" },
-        { "nivel": "Intermediar", "volum": "3-4 x 10-15", "intensitate": "moderata (2-3 repetari in rezerva)", "pauza": "60 s" },
-        { "nivel": "Avansat", "volum": "4 x 8-12", "intensitate": "grea (1-2 repetari in rezerva)", "pauza": "60-90 s" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 12-15",
+          "intensitate": "usoara, fiecare repetare controlata",
+          "pauza": "45-60 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3 x 10-15",
+          "intensitate": "moderata (2 repetari in rezerva)",
+          "pauza": "60 s"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "3-4 x 8-12",
+          "intensitate": "grea (0-1 repetari in rezerva)",
+          "pauza": "60-90 s"
+        }
       ]
     },
     {
@@ -203,29 +328,46 @@
       "functional": true,
       "tip": "Izolare",
       "nivel": "Incepator",
-      "descriere": "Aparatul pentru extensii izoleaza cvadricepsii: din pozitia sezand, intinzi genunchii impotriva unei perne cu greutate. Este util pentru incalzirea genunchilor, pentru finisare dupa exercitiile compuse si, cu greutati mici, pentru recuperare.",
-      "muschiPrincipali": ["Cvadriceps"],
+      "descriere": "La aparatul de extensii stai jos si intinzi genunchii impotriva unei perne cu greutate, asa ca lucreaza doar coapsele din fata. Il poti folosi ca incalzire inainte de presa sau la final, ca finisare. Poate ai auzit ca extensiile strica genunchii: studiile nu sustin asta, iar exercitiul se foloseste chiar si in recuperare, cu conditia ca aparatul sa fie reglat corect.",
+      "muschiPrincipali": [
+        "Cvadriceps"
+      ],
       "muschiSecundari": [],
       "pasi": [
-        "Regleaza spatarul astfel incat genunchii sa fie in dreptul axului de rotatie al aparatului.",
-        "Pune perna de jos pe partea din fata a gleznelor, deasupra labei piciorului.",
+        "Regleaza spatarul astfel incat genunchii sa fie exact in dreptul axului de rotatie al aparatului; de obicei e marcat cu un punct colorat.",
+        "Pune perna de jos pe glezne, chiar deasupra labei piciorului, nu pe mijlocul tibiei.",
         "Prinde manerele laterale si tine spatele lipit de spatar.",
-        "Intinde genunchii pana aproape de extensie completa.",
-        "Strange cvadricepsii o secunda sus.",
-        "Coboara controlat, in 2-3 secunde, fara sa lasi greutatile sa se atinga."
+        "Intinde genunchii in aproximativ 2 secunde, pana aproape de extensia completa.",
+        "Strange coapsele o secunda sus.",
+        "Coboara in 2-3 secunde, fara sa lasi greutatile sa se atinga."
       ],
-      "respiratie": "Expiri cand intinzi picioarele si inspiri la coborare.",
+      "respiratie": "Dai aerul afara cand intinzi picioarele si il tragi in piept cand le cobori.",
       "greseli": [
-        "Genunchii nealiniati cu axul aparatului.",
-        "Ridicarea greutatii din smucituri.",
-        "Ridicarea bazinului de pe scaun.",
-        "Blocarea brusca a genunchilor cu greutate mare."
+        "Genunchii care nu sunt in dreptul axului aparatului: de aici vin aproape toate durerile de genunchi la acest exercitiu.",
+        "Perna asezata prea sus pe picior, care schimba parghia si incarca articulatia.",
+        "Greutatea aruncata din smucituri.",
+        "Bazinul care se ridica de pe scaun ca sa ajute miscarea."
       ],
-      "sfat": "O pauza de o secunda sus face exercitiul mult mai eficient, chiar si cu greutate mai mica.",
+      "sfat": "Tine o secunda sus la fiecare repetare. Iti va trebui mai putina greutate si vei simti mult mai bine coapsele.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 12-15", "intensitate": "usoara (3-4 repetari in rezerva)", "pauza": "60 s" },
-        { "nivel": "Intermediar", "volum": "3-4 x 10-12", "intensitate": "moderata (2 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Avansat", "volum": "4 x 8-12", "intensitate": "moderata-grea (1 repetare in rezerva)", "pauza": "90 s" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-15",
+          "intensitate": "usoara-moderata (2-3 repetari in rezerva)",
+          "pauza": "60 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3 x 10-12",
+          "intensitate": "moderata (1-2 repetari in rezerva)",
+          "pauza": "60-90 s"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "3-4 x 8-15",
+          "intensitate": "grea, ultima serie aproape de epuizare",
+          "pauza": "60-90 s"
+        }
       ]
     },
     {
@@ -235,28 +377,48 @@
       "functional": true,
       "tip": "Compus",
       "nivel": "Incepator",
-      "descriere": "Aparatul de impins reproduce miscarea de la impins la banca, dar pe o traiectorie ghidata. Este sigur fara partener si potrivit pentru a invata miscarea de impingere sau pentru a lucra pana aproape de epuizare.",
-      "muschiPrincipali": ["Pectoral mare"],
-      "muschiSecundari": ["Triceps", "Deltoid anterior"],
+      "descriere": "Aparatul de impins reproduce miscarea de la impins la banca, dar stand jos si pe un traseu ghidat. Nu ai nevoie de cineva care sa te asigure, asa ca e locul ideal sa inveti miscarea de impingere sau sa lucrezi in siguranta aproape de epuizare. Lucreaza pieptul, ajutat de triceps si de partea din fata a umerilor.",
+      "muschiPrincipali": [
+        "Pectoral mare"
+      ],
+      "muschiSecundari": [
+        "Triceps",
+        "Deltoid anterior"
+      ],
       "pasi": [
         "Regleaza scaunul astfel incat manerele sa fie la nivelul mijlocului pieptului.",
-        "Sprijina spatele si capul, cu omoplatii stransi si coborati.",
-        "Prinde manerele cu incheieturile drepte si coatele la aproximativ 45-60 de grade fata de trunchi.",
-        "Impinge manerele in fata pana aproape de extensia bratelor.",
-        "Revino controlat pana simti o intindere usoara in piept."
+        "Sprijina spatele si ceafa de spatar si trage omoplatii usor spre spate si in jos.",
+        "Prinde manerele cu incheieturile drepte si tine coatele cam la 45 de grade fata de corp, nu deschise in lateral.",
+        "Impinge manerele in fata pana aproape de intinderea bratelor, fara sa blochezi coatele.",
+        "Revino incet, pana cand manerele ajung aproape de piept si simti o usoara intindere."
       ],
-      "respiratie": "Expiri cand impingi si inspiri la revenire.",
+      "respiratie": "Dai aerul afara cand impingi si il tragi in piept cand revii.",
       "greseli": [
-        "Coatele deschise la 90 de grade, cu stres pe umeri.",
-        "Desprinderea spatelui de spatar.",
-        "Blocarea brusca a coatelor.",
-        "Scaunul reglat prea jos sau prea sus."
+        "Coatele deschise in lateral, la 90 de grade, care pun presiune pe umeri.",
+        "Umerii care se desprind de spatar si se rotunjesc in fata la finalul miscarii.",
+        "Coatele blocate brusc in partea de sus.",
+        "Scaunul reglat prea jos sau prea sus, asa ca impingi spre gat sau spre burta."
       ],
-      "sfat": "Tine omoplatii stransi pe toata durata miscarii: pieptul lucreaza mai mult si umerii sunt protejati.",
+      "sfat": "Tine omoplatii lipiti de spatar pe toata seria. Pieptul face mai mult din munca, iar umerii raman protejati.",
       "program": [
-        { "nivel": "Incepator", "volum": "3 x 10-12", "intensitate": "usoara-moderata (3 repetari in rezerva)", "pauza": "60-90 s" },
-        { "nivel": "Intermediar", "volum": "4 x 8-12", "intensitate": "65-75% din 1RM (2 repetari in rezerva)", "pauza": "90 s" },
-        { "nivel": "Avansat", "volum": "4-5 x 6-8", "intensitate": "75-85% din 1RM (1-2 repetari in rezerva)", "pauza": "2 min" }
+        {
+          "nivel": "Incepator",
+          "volum": "2-3 x 10-12",
+          "intensitate": "60-70% din 1RM (2-3 repetari in rezerva)",
+          "pauza": "90 s"
+        },
+        {
+          "nivel": "Intermediar",
+          "volum": "3-4 x 8-12",
+          "intensitate": "70-80% din 1RM (1-2 repetari in rezerva)",
+          "pauza": "1,5-2 min"
+        },
+        {
+          "nivel": "Avansat",
+          "volum": "4-5 x 6-10",
+          "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
+          "pauza": "2-3 min"
+        }
       ]
     }
   ]
