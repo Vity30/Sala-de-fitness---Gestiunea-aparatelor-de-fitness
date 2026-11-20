@@ -4,7 +4,7 @@
 - Claude
 
 ## Conversations
-https://claude.ai/chat/d57addef-b220-4c7d-8b0c-76d865635a12 (Formular controlat, validare, salvare pe server si finisaje vizuale)
+[https://claude.ai/chat/d57addef-b220-4c7d-8b0c-76d865635a12] (Formular controlat, validare, salvare pe server si finisaje vizuale)
 
 ## Key requests
 ### 1. Extinderea fisierului api.js

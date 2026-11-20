@@ -4,7 +4,7 @@
 - Gemini
 
 ## Conversations
-https://gemini.google.com/app/b6615f35306b0e65?hl=ro (Integrare json-server, useEffect si tratarea starilor)
+[https://gemini.google.com/app/b6615f35306b0e65?hl=ro] (Integrare json-server, useEffect si tratarea starilor)
 
 ## Key requests
 ### 1. Adaptare json-server si api.js

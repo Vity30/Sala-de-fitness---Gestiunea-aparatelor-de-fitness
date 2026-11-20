@@ -4,7 +4,7 @@
 - Gemini
 
 ## Conversations
-Chat Session (Implementare state local cu useState, functii imutabile, transmitere props, comutare tema light/dark si stilizare personalizata Industrial Steel)
+[https://gemini.google.com/app/b6615f35306b0e65?hl=ro] (Implementare state local cu useState, functii imutabile, transmitere props, comutare tema light/dark si stilizare personalizata Industrial Steel)
 
 ## Key requests
 ### 1. Migrarea listei in state si functii de modificare

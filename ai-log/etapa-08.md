@@ -4,7 +4,7 @@
 - Claude
 
 ## Conversations
-https://claude.ai/chat/d57addef-b220-4c7d-8b0c-76d865635a12 (React Router, pagina de detaliu, CSS Modules, restilizare si detalii pentru aparate)
+[https://claude.ai/chat/d57addef-b220-4c7d-8b0c-76d865635a12] (React Router, pagina de detaliu, CSS Modules, restilizare si detalii pentru aparate)
 
 ## Key requests
 ### 1. Rutele si layout-ul comun
