@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { EMOJI_GRUPA } from "../constants.js";
 import styles from "./AparatCard.module.css";
@@ -6,6 +7,8 @@ export default function AparatCard({ aparat, onToggle, onDelete }) {
   const esteFunctional = aparat.functional;
   const linkDetaliu = `/aparate/${aparat.id}`;
   const codAparat = `#SYS-${String(aparat.id).padStart(3, "0")}`;
+  // Daca poza lipseste din public/img, afisam locul cu emoji in loc de o imagine sparta
+  const [pozaLipsa, setPozaLipsa] = useState(false);
 
   return (
     <li
@@ -15,8 +18,14 @@ export default function AparatCard({ aparat, onToggle, onDelete }) {
     >
       {/* Poza duce si ea la pagina de detaliu; pentru tastatura ajunge linkul din titlu */}
       <Link to={linkDetaliu} className={styles.imgLink} tabIndex={-1} aria-hidden="true">
-        {aparat.img ? (
-          <img src={aparat.img} alt="" className={styles.img} loading="lazy" />
+        {aparat.img && !pozaLipsa ? (
+          <img
+            src={aparat.img}
+            alt=""
+            className={styles.img}
+            loading="lazy"
+            onError={() => setPozaLipsa(true)}
+          />
         ) : (
           <div className={`img-placeholder ${styles.img}`}>
             <span>{EMOJI_GRUPA[aparat.grupa] ?? "🏋️"}</span>

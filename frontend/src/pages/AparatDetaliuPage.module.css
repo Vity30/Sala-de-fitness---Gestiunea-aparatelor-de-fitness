@@ -372,6 +372,192 @@
   line-height: 1.6;
 }
 
+/* Butoanele de sub poza: antrenament si stare */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.actionBtn {
+  padding: 11px 16px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--control-radius);
+  background: var(--accent-soft);
+  color: var(--text-strong);
+  font-family: var(--font-label);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.actionBtn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.actionBtn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Aparatul este deja in antrenament */
+.actionOn,
+.actionOn:hover:not(:disabled) {
+  border-color: var(--ok-border);
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+
+/* Caseta de mentenanta pentru aparatele defecte */
+.maintenance {
+  margin: -8px 0 26px;
+  padding: 16px 18px;
+  border: 1px solid var(--bad-border);
+  border-left: 4px solid var(--bad);
+  border-radius: 12px;
+  background: var(--bad-soft);
+}
+
+.maintenanceHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.maintenance h3 {
+  margin: 0;
+  color: var(--bad);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.maintenanceDate {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.maintenance p {
+  margin: 0 0 10px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.editBtn,
+.cancelBtn {
+  padding: 6px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--control-radius);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.editBtn:hover,
+.cancelBtn:hover {
+  background: var(--accent-soft);
+}
+
+.noteForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  resize: vertical;
+  outline: none;
+}
+
+.noteForm textarea:focus {
+  border-color: var(--accent);
+  box-shadow: var(--focus-ring);
+}
+
+.noteButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.saveBtn {
+  padding: 7px 14px;
+  border: 0;
+  border-radius: var(--control-radius);
+  background: var(--accent-gradient);
+  color: var(--accent-contrast);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+}
+
+/* Demonstratia video */
+.videoBlock,
+.videoBlock + .block {
+  margin-top: 24px;
+}
+
+.videoFrame {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.videoFrame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.videoLink:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
 @media (max-width: 900px) {
   .grid,
   .columns { grid-template-columns: 1fr; }

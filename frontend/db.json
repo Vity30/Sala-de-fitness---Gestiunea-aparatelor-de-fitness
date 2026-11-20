@@ -53,7 +53,8 @@
           "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
           "pauza": "2-3 min"
         }
-      ]
+      ],
+      "videoCautare": "leg press machine proper form"
     },
     {
       "id": 2,
@@ -61,6 +62,8 @@
       "grupa": "Push",
       "functional": false,
       "img": "/img/FluturariPiept.jpg",
+      "defectData": "2026-11-12",
+      "defectNota": "Cablul bratului stang s-a rupt. Piesa este comandata.",
       "tip": "Izolare",
       "nivel": "Incepator",
       "descriere": "La fluturari aduci bratele unul spre celalalt in fata pieptului, ca si cum ai imbratisa un copac mare. Aparatul tine miscarea pe traseul corect, asa ca toata atentia ta poate merge pe piept. E un exercitiu de izolare: nu construiesti forta mare cu el, dar e foarte bun la finalul antrenamentului, dupa exercitiile de impins.",
@@ -105,7 +108,8 @@
           "intensitate": "grea, ultima serie aproape de epuizare",
           "pauza": "60-90 s"
         }
-      ]
+      ],
+      "videoCautare": "pec deck machine fly proper form"
     },
     {
       "id": 3,
@@ -160,7 +164,8 @@
           "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
           "pauza": "2-3 min"
         }
-      ]
+      ],
+      "videoCautare": "lat pulldown proper form"
     },
     {
       "id": 4,
@@ -212,7 +217,8 @@
           "intensitate": "grea, ultima serie aproape de epuizare",
           "pauza": "60-90 s"
         }
-      ]
+      ],
+      "videoCautare": "preacher curl ez bar proper form"
     },
     {
       "id": 5,
@@ -220,6 +226,8 @@
       "grupa": "Cardio",
       "functional": false,
       "img": "/img/BandaAlergare.jpg",
+      "defectData": "2026-11-17",
+      "defectNota": "Banda aluneca la viteze peste 8 km/h. Tehnicianul vine joi.",
       "tip": "Cardio",
       "nivel": "Incepator",
       "descriere": "Banda de alergare e locul unde iti faci cardio-ul in ritmul tau: mers usor, mers in panta sau alergare. Imbunatateste rezistenta si sanatatea inimii si te ajuta sa arzi calorii. Mersul in panta e o alegere foarte buna daca te dor genunchii, pentru ca loveste mult mai putin articulatiile; alergarea arde in schimb mai multe calorii pe minut.",
@@ -268,7 +276,8 @@
           "intensitate": "alergare rapida 11-14 km/h",
           "pauza": "1-2 min de mers usor intre intervale"
         }
-      ]
+      ],
+      "videoCautare": "treadmill incline walking 12-3-30"
     },
     {
       "id": 6,
@@ -319,13 +328,15 @@
           "intensitate": "grea (0-1 repetari in rezerva)",
           "pauza": "60-90 s"
         }
-      ]
+      ],
+      "videoCautare": "ab crunch machine proper form"
     },
     {
       "id": 7,
-      "nume": "Extensii",
+      "nume": "Extensii pentru picioare",
       "grupa": "Legs",
       "functional": true,
+      "img": "/img/ExtensiiPicioare.jpg",
       "tip": "Izolare",
       "nivel": "Incepator",
       "descriere": "La aparatul de extensii stai jos si intinzi genunchii impotriva unei perne cu greutate, asa ca lucreaza doar coapsele din fata. Il poti folosi ca incalzire inainte de presa sau la final, ca finisare. Poate ai auzit ca extensiile strica genunchii: studiile nu sustin asta, iar exercitiul se foloseste chiar si in recuperare, cu conditia ca aparatul sa fie reglat corect.",
@@ -368,13 +379,15 @@
           "intensitate": "grea, ultima serie aproape de epuizare",
           "pauza": "60-90 s"
         }
-      ]
+      ],
+      "videoCautare": "leg extension machine proper form"
     },
     {
       "id": 8,
       "nume": "Aparat de impins",
       "grupa": "Push",
       "functional": true,
+      "img": "/img/AparatImpins.jpg",
       "tip": "Compus",
       "nivel": "Incepator",
       "descriere": "Aparatul de impins reproduce miscarea de la impins la banca, dar stand jos si pe un traseu ghidat. Nu ai nevoie de cineva care sa te asigure, asa ca e locul ideal sa inveti miscarea de impingere sau sa lucrezi in siguranta aproape de epuizare. Lucreaza pieptul, ajutat de triceps si de partea din fata a umerilor.",
@@ -419,7 +432,8 @@
           "intensitate": "75-85% din 1RM (0-2 repetari in rezerva)",
           "pauza": "2-3 min"
         }
-      ]
+      ],
+      "videoCautare": "seated chest press machine proper form"
     }
   ]
 }

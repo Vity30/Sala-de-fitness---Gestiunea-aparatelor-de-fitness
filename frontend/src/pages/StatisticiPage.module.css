@@ -1,0 +1,230 @@
+/* =========================================================
+   PAGINA DE STATISTICI
+========================================================= */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cele patru cifre mari */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  background: var(--texture), var(--card-bg);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.kpiValue {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.kpiLabel {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.kpiOk .kpiValue { color: var(--ok); }
+.kpiBad .kpiValue { color: var(--bad); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 20px 22px;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  background: var(--texture), var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.card h3 {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card h3.spaced {
+  margin-top: 24px;
+}
+
+/* Graficul cu bare orizontale */
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 110px 1fr 28px;
+  align-items: center;
+  gap: 12px;
+}
+
+.barLabel {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.barTrack {
+  display: flex;
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--track-bg);
+}
+
+.barOk,
+.barBad {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.barOk { background: var(--ok); }
+.barBad { background: var(--bad); }
+
+.barValue {
+  color: var(--text-strong);
+  font-weight: 800;
+  text-align: right;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0 0;
+  color: var(--subtle);
+  font-size: 0.78rem;
+}
+
+.dotOk,
+.dotBad {
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+  border-radius: 50%;
+}
+
+.dotOk { margin-left: 0; background: var(--ok); }
+.dotBad { background: var(--bad); }
+
+/* Pastilele pentru tip si nivel */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 7px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+.chips strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* Lista aparatelor de reparat */
+.repairs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repairs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--bad-border);
+  border-left: 4px solid var(--bad);
+  border-radius: 10px;
+  background: var(--bad-soft);
+}
+
+.repairs p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.repairName {
+  color: var(--text-strong);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.repairName:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.repairDate {
+  flex-shrink: 0;
+  color: var(--bad);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.allGood {
+  margin: 0;
+  color: var(--ok);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .kpiValue { font-size: 1.7rem; }
+  .barRow { grid-template-columns: 90px 1fr 22px; gap: 8px; }
+  .repairs li { flex-direction: column; gap: 6px; }
+}

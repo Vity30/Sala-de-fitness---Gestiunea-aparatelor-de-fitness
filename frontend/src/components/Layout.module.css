@@ -63,6 +63,8 @@
 /* Navigatia: pastile pe o sina, cea activa colorata */
 .nav {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 4px;
   margin-top: 22px;
   padding: 5px;
@@ -158,6 +160,7 @@
   .header { padding: 62px 14px 24px; }
   .title { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
   .main { margin-top: 24px; padding: 0 12px; }
-  .link { padding: 8px 16px; }
+  .nav { border-radius: 20px; }
+  .link { padding: 8px 12px; font-size: 0.7rem; letter-spacing: 0.08em; }
   .eyebrow { font-size: 0.6rem; letter-spacing: 0.16em; }
 }
